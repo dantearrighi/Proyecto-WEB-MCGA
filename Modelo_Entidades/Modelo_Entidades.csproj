@@ -1,0 +1,132 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{F31944DF-5392-4330-BC2E-E0F8BCDB249D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Modelo_Entidades</RootNamespace>
+    <AssemblyName>Modelo_Entidades</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Data.Services.Client" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Cta Cte\Liquidacion.cs" />
+    <Compile Include="Cta Cte\CtaCte.cs" />
+    <Compile Include="Cta Cte\Comprobante.cs" />
+    <Compile Include="Cta Cte\Movimiento.cs" />
+    <Compile Include="Cuotas %28Patron Decorador%29\Alterador.cs" />
+    <Compile Include="Expedientes %28Patron Strategy%29\Comitente.cs" />
+    <Compile Include="Cursos\Clase.cs" />
+    <Compile Include="Cta Cte\Boleta.cs" />
+    <Compile Include="Cuotas %28Patron Decorador%29\Descuento_Anual.cs" />
+    <Compile Include="Cuotas %28Patron Decorador%29\Bimensual.cs" />
+    <Compile Include="Cuotas %28Patron Decorador%29\Anual.cs" />
+    <Compile Include="Cuotas %28Patron Decorador%29\Cuota.cs" />
+    <Compile Include="Cuotas %28Patron Decorador%29\Modificador.cs" />
+    <Compile Include="Cuotas %28Patron Decorador%29\Con_Recargo.cs" />
+    <Compile Include="Cta Cte\Factura.cs" />
+    <Compile Include="Expedientes %28Patron Strategy%29\Expediente.cs" />
+    <Compile Include="Expedientes %28Patron Strategy%29\FE.cs" />
+    <Compile Include="Expedientes %28Patron Strategy%29\HM.cs" />
+    <Compile Include="Expedientes %28Patron Strategy%29\OI.cs" />
+    <Compile Include="GCI_Auditoria.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GCI_Auditoria.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Entidades %28Patron Singleton %29\GCI_AuditoriaEntidades.cs" />
+    <Compile Include="Profesionales\Tipo_Certificado.cs" />
+    <Compile Include="Profesionales\Tipo_Documento.cs" />
+    <Compile Include="Profesionales\Matricula.cs" />
+    <Compile Include="Profesionales\Profesional.cs" />
+    <Compile Include="Expedientes %28Patron Strategy%29\Tarea.cs" />
+    <Compile Include="Seguridad\Perfil.cs" />
+    <Compile Include="Seguridad\Usuario.cs" />
+    <Compile Include="Titulo\Titulo.cs" />
+    <Compile Include="Titulo\Especialidad.cs" />
+    <Compile Include="Profesionales\Estado.cs" />
+    <Compile Include="Profesionales\Tipo_Matricula.cs" />
+    <Compile Include="Titulo\Plan.cs" />
+    <Compile Include="Titulo\Jurisdiccion.cs" />
+    <Compile Include="Titulo\Modalidad.cs" />
+    <Compile Include="Titulo\Nivel.cs" />
+    <Compile Include="Profesionales\Localidad.cs" />
+    <Compile Include="Profesionales\Provincia.cs" />
+    <Compile Include="Seguridad\Formulario.cs" />
+    <Compile Include="GCI.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GCI.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Seguridad\Grupo.cs" />
+    <Compile Include="Seguridad\Permiso.cs" />
+    <Compile Include="Entidades %28Patron Singleton %29\GCIEntidades.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Titulo\Universidad.cs" />
+    <Compile Include="Titulo\Legajo_Academico.cs" />
+    <Compile Include="Varios\Auditoria_Log.cs" />
+    <Compile Include="Varios\Auditoria_Cuota.cs" />
+    <Compile Include="Varios\Colegio.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EntityDeploy Include="GCI.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>GCI.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.Config" />
+    <EntityDeploy Include="GCI_Auditoria.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>GCI_Auditoria.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Properties\DataSources\GCIEntidades.datasource" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="GCI.edmx.sql" />
+    <Content Include="GCI_Auditoria.edmx.sql" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

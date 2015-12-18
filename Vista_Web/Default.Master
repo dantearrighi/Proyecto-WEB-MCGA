@@ -1,0 +1,76 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Default.master.cs" Inherits="Vista_Web.Default" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Página principal</title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link href="CSS/bootstrap.min.css" rel="stylesheet" />
+    <link href="CSS/custom.css" rel="stylesheet" />
+</head>
+<body>
+    <form id="Form1" runat="server">
+        <%--Header--%>
+        <nav id="Nav1" class="navbar navbar-default navbar-static-top" role="navigation" runat="server">
+            <div id="Div1" class="container-fluid" runat="server">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div id="Div2" runat="server" class="navbar-header">
+                    <button id="Button1" runat="server" type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbarcollapse">
+                        <span id="Span1" runat="server" class="sr-only">Toggle navigation</span>
+                        <span id="Span2" runat="server" class="icon-bar"></span>
+                        <span id="Span3" runat="server" class="icon-bar"></span>
+                        <span id="Span4" runat="server" class="icon-bar"></span>
+                    </button>
+                    <a id="A1" runat="server" class="navbar-brand" href="/Principal.aspx">CIE</a>
+                </div>
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div runat="server" class="collapse navbar-collapse" id="navbarcollapse">
+                    <ul runat="server" class="nav navbar-nav" id="ulmenu">
+                    </ul>
+                    <%--                    <div id="Div3" runat="server" class="navbar-form navbar-left" role="search">
+                        <div id="Div4" runat="server" class="form-group">
+                            <input id="Text1" runat="server" type="text" class="form-control" placeholder="Search" />
+                        </div>
+                        <asp:Button ID="Button4" runat="server" Text="Button" />
+                    </div>--%>
+                    <ul id="Ul1" runat="server" class="nav navbar-nav navbar-right">
+                        <li runat="server">
+                            <a runat="server" href="#" class="dropdown-toggle" data-toggle="dropdown" id="user_menu"></a>
+                            <ul runat="server" class="dropdown-menu" role="menu">
+                                <li id="Li1" runat="server"><a id="A2" runat="server" href="~/Seguridad/Cambiar Clave.aspx">Cambiar clave</a></li>
+                                <li runat="server"><a runat="server" href="#">Ajustes</a></li>
+                                <li runat="server" class="divider"></li>
+                                <li id="Li2" runat="server"><asp:LinkButton ID="LinkButton1" runat="server" OnClick="Button3_Click">Salir</asp:LinkButton></li>
+                                <%--<a id="A3" runat="server" href="~/Seguridad/Login.aspx">Salir</a>--%>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <asp:ContentPlaceHolder ID="Contenido" runat="server">
+        </asp:ContentPlaceHolder>
+
+        <asp:ContentPlaceHolder ID="Contenido_Especial" runat="server">
+        </asp:ContentPlaceHolder>
+
+        <%--Footer--%>
+<%--        <nav class="navbar navbar-default navbar-fixed-bottom" role="navigation">
+            <div class="container">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#">Términos y Condiciones</a></li>
+                    <li><a href="#">FAQ</a></li>
+                </ul>
+            </div>
+        </nav>--%>
+        <script src="/js/jquery-1.11.1.min.js"></script>
+        <script src="/js/bootstrap.js"></script>
+        <script src="/js/custom.js"></script>
+    </form>
+</body>
+</html>

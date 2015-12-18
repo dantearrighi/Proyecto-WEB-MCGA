@@ -1,0 +1,26 @@
+﻿body { padding-bottom: 70px;}
+
+.margin-left-5 {
+    margin-left: 5px;
+}
+
+.margin-top-10 {
+    margin-top: 10px;
+}
+
+.small-panel {
+    padding: 2%;
+    min-height: 260px;
+}
+
+.margin-buttom-10{
+    margin-bottom: 10px;
+}
+
+
+.error-message {
+    position: absolute;
+    top: 60px;
+    right: 0px;
+}
+
