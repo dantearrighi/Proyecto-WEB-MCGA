@@ -111,40 +111,7 @@
                 </Style>
               </TextRun>
               <TextRun>
-                <Value>Hemos enviado una constancia de turno al correo </Value>
-                <Style>
-                  <FontStyle>Normal</FontStyle>
-                  <FontFamily>calibri</FontFamily>
-                  <FontSize>12pt</FontSize>
-                  <FontWeight>Normal</FontWeight>
-                  <TextDecoration>None</TextDecoration>
-                  <Color>#000000</Color>
-                </Style>
-              </TextRun>
-              <TextRun>
-                <Value>=Fields!email.Value</Value>
-                <Style>
-                  <FontStyle>Normal</FontStyle>
-                  <FontFamily>calibri</FontFamily>
-                  <FontSize>12pt</FontSize>
-                  <FontWeight>Bold</FontWeight>
-                  <TextDecoration>None</TextDecoration>
-                  <Color>#000000</Color>
-                </Style>
-              </TextRun>
-              <TextRun>
-                <Value>. </Value>
-                <Style>
-                  <FontStyle>Normal</FontStyle>
-                  <FontFamily>calibri</FontFamily>
-                  <FontSize>12pt</FontSize>
-                  <FontWeight>Bold</FontWeight>
-                  <TextDecoration>None</TextDecoration>
-                  <Color>#000000</Color>
-                </Style>
-              </TextRun>
-              <TextRun>
-                <Value xml:space="preserve">
+                <Value>Hemos enviado una constancia de turno al correo 
 </Value>
                 <Style>
                   <FontStyle>Normal</FontStyle>

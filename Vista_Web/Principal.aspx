@@ -4,6 +4,6 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="Contenido" runat="server">
     <div class="jumbotron">
-        <h1>Bienvenido al sistema del CIE</h1>
+        <h1>Bienvenido al sistema de Seguridad</h1>
     </div>
 </asp:Content>

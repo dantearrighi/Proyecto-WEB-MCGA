@@ -78,11 +78,11 @@ namespace Controladora
             oUsuario.clave = GenerarClaveAleatoria(8, false);
             //enviar la clave sin encriptar por mail
 
-            string De = "gestioncolegioingenieros@gmail.com";
-            string Password = "aguirregil";
+            string De = "dantearrighi@gmail.com";
+            string Password = "9789hrqs";
             string Para = email;
             string Mensaje = "Bienvenido al sistema. Su nombre de usuario es " + oUsuario.usuario + " y su clave temporal es " + oUsuario.clave + ". Por favor cambie su clave la primera vez que entre al sistema.";
-            string Asunto = "Usuario y Contraseña para el sistema";
+            string Asunto = "WASS - Usuario y Contraseña para el sistema";
             System.Net.Mail.MailMessage Email;
 
             Email = new System.Net.Mail.MailMessage(De, Para, Asunto, Mensaje);

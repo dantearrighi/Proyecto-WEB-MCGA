@@ -24,7 +24,7 @@
                         <span id="Span3" runat="server" class="icon-bar"></span>
                         <span id="Span4" runat="server" class="icon-bar"></span>
                     </button>
-                    <a id="A1" runat="server" class="navbar-brand" href="/Principal.aspx">CIE</a>
+                    <a id="A1" runat="server" class="navbar-brand" href="/Principal.aspx">WASS</a>
                 </div>
 
                 <!-- Collect the nav links, forms, and other content for toggling -->

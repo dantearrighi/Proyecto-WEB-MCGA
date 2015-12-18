@@ -64,7 +64,7 @@ namespace Vista_Web
             try
             {
 
-                oUsuario = cUsuario.Login(txt_nombreUsuario.Text, txt_contraseña.Text);
+                oUsuario = cUsuario.Login(txt_nombreUsuario.Text, Controladora.cEncriptacion.Encriptar(txt_contraseña.Text));
 
                 Session["sUsuario"] = oUsuario;
                 Page.Response.Redirect("~/Principal.aspx");
