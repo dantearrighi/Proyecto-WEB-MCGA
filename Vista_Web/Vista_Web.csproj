@@ -91,7 +91,6 @@
     <Content Include="Auditorias\Gestion de Auditorías de Cuotas.aspx" />
     <Content Include="Auditorias\Gestion de Auditorías.aspx" />
     <Content Include="Auditorias\Auditoria.aspx" />
-    <Content Include="Ayuda\Manual de usuario.aspx" />
     <Content Include="Botoneras\Botonera1.ascx" />
     <Content Include="Estadísticas\FrmListado_Expte_Obra.aspx" />
     <Content Include="Estadísticas\FrmListado_Expte_Monto_Esp.aspx" />
@@ -104,27 +103,14 @@
     <Content Include="Estadísticas\FrmListado_Mat_Esp.aspx" />
     <Content Include="Estadísticas\Estadísticas.aspx" />
     <Content Include="Estadísticas\FrmListado_Prof_Est.aspx" />
-    <Content Include="Expedientes\Gestion de Tareas.aspx" />
-    <Content Include="Expedientes\Gestion de Comitentes.aspx" />
-    <Content Include="Comitente\Seleccionar comitente.aspx" />
-    <Content Include="Comitente\Comitente.aspx" />
-    <Content Include="Contabilidad\FrmImprimirRecibo.aspx" />
     <Content Include="CSS\bootstrap-theme.css" />
     <Content Include="CSS\bootstrap.min.css" />
     <Content Include="CSS\bootstrap.css" />
     <Content Include="CSS\custom.css" />
-    <Content Include="Contabilidad\Gestion de Recibos.aspx" />
-    <Content Include="Cuotas\FrmImprimirBoleta_Prof.aspx" />
-    <Content Include="Cuotas\FrmImprimirBoleta.aspx" />
-    <Content Include="Cuotas\Gestion de Cuotas.aspx" />
-    <Content Include="Expedientes\Gestion de Expedientes.aspx" />
-    <Content Include="Expedientes\Seleccionar Expediente.aspx" />
-    <Content Include="Expedientes\Expediente.aspx" />
     <Content Include="JS\bootstrap.js" />
     <Content Include="JS\bootstrap.min.js" />
     <Content Include="JS\custom.js" />
     <Content Include="JS\jquery-1.11.1.min.js" />
-    <Content Include="Profesional\FrmImprimirCertificado_I.aspx" />
     <Content Include="Profesional\FrmImprimirCertificado.aspx" />
     <Content Include="Profesional\Gestion de Profesionales.aspx" />
     <Content Include="Profesional\Seleccionar profesional.aspx" />
@@ -253,13 +239,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Boletas.xsd</DependentUpon>
     </Compile>
-    <Compile Include="Ayuda\Manual de usuario.aspx.cs">
-      <DependentUpon>Manual de usuario.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Ayuda\Manual de usuario.aspx.designer.cs">
-      <DependentUpon>Manual de usuario.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Botoneras\Botonera1.ascx.cs">
       <DependentUpon>Botonera1.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -344,103 +323,12 @@
     <Compile Include="Estadísticas\FrmListado_Prof_Est.aspx.designer.cs">
       <DependentUpon>FrmListado_Prof_Est.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Expedientes\Gestion de Tareas.aspx.cs">
-      <DependentUpon>Gestion de Tareas.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Expedientes\Gestion de Tareas.aspx.designer.cs">
-      <DependentUpon>Gestion de Tareas.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Expedientes\Gestion de Comitentes.aspx.cs">
-      <DependentUpon>Gestion de Comitentes.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Expedientes\Gestion de Comitentes.aspx.designer.cs">
-      <DependentUpon>Gestion de Comitentes.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Comitente\Seleccionar comitente.aspx.cs">
-      <DependentUpon>Seleccionar comitente.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Comitente\Seleccionar comitente.aspx.designer.cs">
-      <DependentUpon>Seleccionar comitente.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Comitente\Comitente.aspx.cs">
-      <DependentUpon>Comitente.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Comitente\Comitente.aspx.designer.cs">
-      <DependentUpon>Comitente.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Contabilidad\FrmImprimirRecibo.aspx.cs">
-      <DependentUpon>FrmImprimirRecibo.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Contabilidad\FrmImprimirRecibo.aspx.designer.cs">
-      <DependentUpon>FrmImprimirRecibo.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Contabilidad\Gestion de Recibos.aspx.cs">
-      <DependentUpon>Gestion de Recibos.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Contabilidad\Gestion de Recibos.aspx.designer.cs">
-      <DependentUpon>Gestion de Recibos.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Cuotas\FrmImprimirBoleta_Prof.aspx.cs">
-      <DependentUpon>FrmImprimirBoleta_Prof.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Cuotas\FrmImprimirBoleta_Prof.aspx.designer.cs">
-      <DependentUpon>FrmImprimirBoleta_Prof.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Cuotas\FrmImprimirBoleta.aspx.cs">
-      <DependentUpon>FrmImprimirBoleta.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Cuotas\FrmImprimirBoleta.aspx.designer.cs">
-      <DependentUpon>FrmImprimirBoleta.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Cuotas\Gestion de Cuotas.aspx.cs">
-      <DependentUpon>Gestion de Cuotas.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Cuotas\Gestion de Cuotas.aspx.designer.cs">
-      <DependentUpon>Gestion de Cuotas.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Default.Master.cs">
       <DependentUpon>Default.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Default.Master.designer.cs">
       <DependentUpon>Default.Master</DependentUpon>
-    </Compile>
-    <Compile Include="Expedientes\Gestion de Expedientes.aspx.cs">
-      <DependentUpon>Gestion de Expedientes.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Expedientes\Gestion de Expedientes.aspx.designer.cs">
-      <DependentUpon>Gestion de Expedientes.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Expedientes\Seleccionar Expediente.aspx.cs">
-      <DependentUpon>Seleccionar Expediente.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Expedientes\Seleccionar Expediente.aspx.designer.cs">
-      <DependentUpon>Seleccionar Expediente.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Expedientes\Expediente.aspx.cs">
-      <DependentUpon>Expediente.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Expedientes\Expediente.aspx.designer.cs">
-      <DependentUpon>Expediente.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Profesional\FrmImprimirCertificado_I.aspx.cs">
-      <DependentUpon>FrmImprimirCertificado_I.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Profesional\FrmImprimirCertificado_I.aspx.designer.cs">
-      <DependentUpon>FrmImprimirCertificado_I.aspx</DependentUpon>
     </Compile>
     <Compile Include="Profesional\FrmImprimirCertificado.aspx.cs">
       <DependentUpon>FrmImprimirCertificado.aspx</DependentUpon>
@@ -784,9 +672,6 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
-    <EmbeddedResource Include="Contabilidad\Recibos.rdlc" />
-    <EmbeddedResource Include="Cuotas\Boletas.rdlc" />
-    <EmbeddedResource Include="Cuotas\Boletas_Prof.rdlc" />
     <EmbeddedResource Include="Estadísticas\Cuotas_Por_Desc.rdlc" />
     <EmbeddedResource Include="Estadísticas\Cuotas_Por_Esp.rdlc" />
     <EmbeddedResource Include="Estadísticas\Expedientes_Por_Esp.rdlc" />
@@ -797,7 +682,6 @@
     <EmbeddedResource Include="Estadísticas\Titulos_Por_Esp.rdlc" />
     <EmbeddedResource Include="Estadísticas\Titulos_Por_Uni.rdlc" />
     <EmbeddedResource Include="Profesional\Certificado_Habilitación.rdlc" />
-    <EmbeddedResource Include="Profesional\Certificado_Incumbencias.rdlc" />
     <EmbeddedResource Include="Estadísticas\Matriculas_Por_Esp.rdlc" />
     <EmbeddedResource Include="Titulos\Titulos.rdlc" />
   </ItemGroup>
