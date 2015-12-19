@@ -1,14 +1,14 @@
 
 -- --------------------------------------------------
--- Entity Designer DDL Script for SQL Server 2005, 2008, and Azure
+-- Entity Designer DDL Script for SQL Server 2005, 2008, 2012 and Azure
 -- --------------------------------------------------
--- Date Created: 02/23/2013 15:55:01
--- Generated from EDMX file: C:\Users\Pablo\Desktop\GCI\Modelo_Entidades\GCI_Auditoria.edmx
+-- Date Created: 12/19/2015 14:09:35
+-- Generated from EDMX file: D:\Documentos\UAI\4to\MCGA\Proyecto-WEB-MCGA\Modelo_Entidades\WASSWeb_Auditoria.edmx
 -- --------------------------------------------------
 
 SET QUOTED_IDENTIFIER OFF;
 GO
-USE [GCI_Auditoria];
+USE [WASSWeb_Auditoria];
 GO
 IF SCHEMA_ID(N'dbo') IS NULL EXECUTE(N'CREATE SCHEMA [dbo]');
 GO
@@ -25,9 +25,6 @@ GO
 IF OBJECT_ID(N'[dbo].[Auditorias_Log]', 'U') IS NOT NULL
     DROP TABLE [dbo].[Auditorias_Log];
 GO
-IF OBJECT_ID(N'[dbo].[Auditorias_Cuotas]', 'U') IS NOT NULL
-    DROP TABLE [dbo].[Auditorias_Cuotas];
-GO
 
 -- --------------------------------------------------
 -- Creating all tables
@@ -42,18 +39,6 @@ CREATE TABLE [dbo].[Auditorias_Log] (
 );
 GO
 
--- Creating table 'Auditorias_Cuotas'
-CREATE TABLE [dbo].[Auditorias_Cuotas] (
-    [id] int IDENTITY(1,1) NOT NULL,
-    [estado] bit  NOT NULL,
-    [descripcion] nvarchar(max)  NOT NULL,
-    [Profesional_dni] int  NOT NULL,
-    [usuario] nvarchar(max)  NOT NULL,
-    [fecha] datetime  NOT NULL,
-    [accion] nvarchar(max)  NOT NULL
-);
-GO
-
 -- --------------------------------------------------
 -- Creating all PRIMARY KEY constraints
 -- --------------------------------------------------
@@ -61,12 +46,6 @@ GO
 -- Creating primary key on [id] in table 'Auditorias_Log'
 ALTER TABLE [dbo].[Auditorias_Log]
 ADD CONSTRAINT [PK_Auditorias_Log]
-    PRIMARY KEY CLUSTERED ([id] ASC);
-GO
-
--- Creating primary key on [id] in table 'Auditorias_Cuotas'
-ALTER TABLE [dbo].[Auditorias_Cuotas]
-ADD CONSTRAINT [PK_Auditorias_Cuotas]
     PRIMARY KEY CLUSTERED ([id] ASC);
 GO
 

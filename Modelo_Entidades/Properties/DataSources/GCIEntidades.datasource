@@ -5,6 +5,6 @@
     Renaming the file extension or editing the content of this file may   
     cause the file to be unrecognizable by the program.
 -->
-<GenericObjectDataSource DisplayName="GCIEntidades" Identifier="Modelo_Entidades.GCIEntidades" ProviderType="Microsoft.VisualStudio.DataDesign.DataSourceProviders.EntityDataModel.EdmDataSourceProvider" Version="1.0" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
-   <TypeInfo>Modelo_Entidades.GCIEntidades, GCI.Designer.cs, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</TypeInfo>
+<GenericObjectDataSource DisplayName="WASSWebEntidades" Identifier="Modelo_Entidades.WASSWebEntidades" ProviderType="Microsoft.VisualStudio.DataDesign.DataSourceProviders.EntityDataModel.EdmDataSourceProvider" Version="1.0" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+   <TypeInfo>Modelo_Entidades.WASSWebEntidades, GCI.Designer.cs, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</TypeInfo>
 </GenericObjectDataSource>

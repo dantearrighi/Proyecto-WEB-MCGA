@@ -5,15 +5,15 @@ using System.Text;
 
 namespace Modelo_Entidades
 {
-    public partial class GCIEntidades
+    public partial class WASSWebEntidades
     {
-        private static GCIEntidades _Instancia;
+        private static WASSWebEntidades _Instancia;
 
-            public static GCIEntidades ObtenerInstancia()
+            public static WASSWebEntidades ObtenerInstancia()
             {
                 if (_Instancia == null)
                 {
-                    _Instancia = new GCIEntidades();
+                    _Instancia = new WASSWebEntidades();
                 }
                 return _Instancia;
             }

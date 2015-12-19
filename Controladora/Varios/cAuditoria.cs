@@ -9,7 +9,7 @@ namespace Controladora
     {
         // Declaro las variables a utilizar en la clase
         private static cAuditoria instancia;
-        private Modelo_Entidades.GCI_AuditoriaContainer oModelo_Entidades;
+        private Modelo_Entidades.WASSWeb_AuditoriaContainer oModelo_Entidades;
 
         // Aplico el patrón de diseño Singleton a la clase
         public static cAuditoria ObtenerInstancia()
@@ -23,7 +23,7 @@ namespace Controladora
         // Coloco al constructor como privado.
         private cAuditoria()
         {
-            oModelo_Entidades = Modelo_Entidades.GCI_AuditoriaContainer.ObtenerInstancia();
+            oModelo_Entidades = Modelo_Entidades.WASSWeb_AuditoriaContainer.ObtenerInstancia();
         }
 
         // Audito el login de un usuario y agrego la auditoria
@@ -32,11 +32,7 @@ namespace Controladora
             oAuditoria.Alta(oAuditoria);
         }
 
-        // Audito el login de un usuario y agrego la auditoria
-        public void AuditarCuota(Modelo_Entidades.Auditoria_Cuota oCuota)
-        {
-            oCuota.Alta(oCuota);
-        }
+        
 
         // Obtener las auditorias
         public List<Modelo_Entidades.Auditoria_Log> ObtenerAuditorias()
@@ -55,12 +51,7 @@ namespace Controladora
             return oAuditoria;
         }
 
-        // Obtener las auditorias de la cuotas
-        public List<Modelo_Entidades.Auditoria_Cuota> ObtenerAuditoriasCuotas()
-        {
-            return oModelo_Entidades.Auditorias_Cuotas.ToList();
-        }
-
+        
         // Obtengo las acciones de todas las auditorias
         public List<string> ObtenerAcciones()
         {
@@ -107,29 +98,7 @@ namespace Controladora
             return (List<Modelo_Entidades.Auditoria_Log>)Consulta.ToList();
         }
 
-        // Metodo de filtrado general para todos las auditorias de las cuotas
-        public List<Modelo_Entidades.Auditoria_Cuota> FiltrarAuditoriasCuotas(string nya, string dni, string cuota)
-        {
-            var Consulta = from oAuditoria in oModelo_Entidades.Auditorias_Cuotas.ToList()
-                           select oAuditoria;
-
-            if (nya != "0")
-            {
-                Consulta = Consulta.Where(oAuditoria => oAuditoria.usuario.Contains(nya));
-            }
-
-            if (dni != "0")
-            {
-                Consulta = Consulta.Where(oAuditoria => oAuditoria.Profesional_dni.ToString() == dni);
-            }
-
-            if (cuota != "0")
-            {
-                Consulta = Consulta.Where(oAuditoria => oAuditoria.descripcion == cuota);
-            }
-
-            return (List<Modelo_Entidades.Auditoria_Cuota>)Consulta.ToList();
-        }
+        
 
     }
 }

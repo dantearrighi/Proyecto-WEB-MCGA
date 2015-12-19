@@ -54,7 +54,7 @@ namespace Vista_Web
             modo = "Alta";
             usuario = oUsuario.usuario;
 
-            Response.Redirect(String.Format("~/Profesional/Profesional.aspx?profesional={0}&modo={1}&usuario={2}", Server.UrlEncode(profesional), Server.UrlEncode(modo), Server.UrlEncode(usuario)));
+            Response.Redirect(String.Format("~/Profesionales/Profesional.aspx?profesional={0}&modo={1}&usuario={2}", Server.UrlEncode(profesional), Server.UrlEncode(modo), Server.UrlEncode(usuario)));
         }
 
         // Al hacer click en "Ver detalle"
@@ -73,7 +73,7 @@ namespace Vista_Web
                 modo = "Consulta";
                 usuario = oUsuario.usuario;
 
-                Response.Redirect(String.Format("~/Profesional/Profesional.aspx?profesional={0}&modo={1}&usuario={2}", Server.UrlEncode(profesional), Server.UrlEncode(modo), Server.UrlEncode(usuario)));
+                Response.Redirect(String.Format("~/Profesionales/Profesional.aspx?profesional={0}&modo={1}&usuario={2}", Server.UrlEncode(profesional), Server.UrlEncode(modo), Server.UrlEncode(usuario)));
             }
         }
 
@@ -93,7 +93,7 @@ namespace Vista_Web
                 modo = "Modifica";
                 usuario = oUsuario.usuario;
 
-                Response.Redirect(String.Format("~/Profesional/Profesional.aspx?profesional={0}&modo={1}", Server.UrlEncode(profesional), Server.UrlEncode(modo), Server.UrlEncode(usuario)));
+                Response.Redirect(String.Format("~/Profesionales/Profesional.aspx?profesional={0}&modo={1}", Server.UrlEncode(profesional), Server.UrlEncode(modo), Server.UrlEncode(usuario)));
             }
         }
 
@@ -129,16 +129,11 @@ namespace Vista_Web
             e.Row.Cells[8].Visible = false;
             e.Row.Cells[9].Visible = false;
             e.Row.Cells[10].Visible = false;
-            e.Row.Cells[11].Visible = false;
-            e.Row.Cells[12].Visible = false;
+            
+           
         }
 
-        protected void txt_num_matricula_TextChanged(object sender, EventArgs e)
-        {
-            lProfesionales = cProfesional.FiltrarPorICIE(txt_num_matricula.Text);
-            gvProfesionales.DataSource = lProfesionales;
-            gvProfesionales.DataBind();
-        }
+        
 
         protected void txt_dni_TextChanged(object sender, EventArgs e)
         {

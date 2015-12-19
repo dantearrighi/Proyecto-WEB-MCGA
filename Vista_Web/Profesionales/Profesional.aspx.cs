@@ -23,6 +23,9 @@ namespace Vista_Web
 
         string tipodocumento;
         string localidad;
+        string localidadE;
+        string provinciaE;
+        
         string provincia;
 
 
@@ -42,15 +45,17 @@ namespace Vista_Web
         Modelo_Entidades.Profesional oProfesional;
 
         Modelo_Entidades.Direccion oDireccion;
+        Modelo_Entidades.Direccion oDireccionE;
 
         Modelo_Entidades.Usuario miUsuario;
 
         Modelo_Entidades.Tipo_Documento oTipoDocumento;
         Modelo_Entidades.Localidad oLocalidad;
+        Modelo_Entidades.Localidad oLocalidadE;
+        Modelo_Entidades.Provincia oProvinciaE;
         Modelo_Entidades.Provincia oProvincia;
 
-        List<Modelo_Entidades.Movimiento> ListaMovimientos = new List<Modelo_Entidades.Movimiento>();
-        
+      
 
         List<Modelo_Entidades.Tipo_Documento> lTipoDocumentos;
         List<Modelo_Entidades.Provincia> lProvincias;
@@ -162,7 +167,7 @@ namespace Vista_Web
 
         protected void btn_cancelar_Click(object sender, EventArgs e)
         {
-            Page.Response.Redirect("~/Profesional/Gestion de Profesionales.aspx");
+            Page.Response.Redirect("~/Profesionales/Gestion de Profesionales.aspx");
         }
 
         protected void btn_guardar_Click(object sender, EventArgs e)
@@ -199,6 +204,17 @@ namespace Vista_Web
                     oLocalidad = cLocalidad.BuscarLocalidadPorDesc(localidad);
                     oDireccion.Localidad = oLocalidad;
                     oProfesional.Direcciones.Add(oDireccion);
+
+
+                    //DE TRABAJO
+                    oDireccionE = new Modelo_Entidades.Direccion();
+                    oDireccionE.direccion = txt_direccionE.Text;
+
+                    localidadE = cmb_localidadesE.SelectedValue.ToString();
+                    oLocalidadE = cLocalidad.BuscarLocalidadPorDesc(localidadE);
+                    oDireccionE.Localidad = oLocalidadE;
+                    oProfesional.Direcciones.Add(oDireccionE);
+
 
 
                 }
@@ -280,15 +296,17 @@ namespace Vista_Web
 
                   if (modo == "Alta")
                     {
+                        oProfesional.Estado = cEstado.ObtenerEstadoHabilitado();
+                        oProfesional.observaciones = "no hay observaciones";
                         cProfesional.Alta(oProfesional);                    
                                             
-                        Page.Response.Redirect("~/Profesional/Gestion de Profesionales.aspx");
+                        Page.Response.Redirect("~/Profesionales/Gestion de Profesionales.aspx");
                     }
 
                     else
                     {
                         cProfesional.Modificacion(oProfesional);
-                        Page.Response.Redirect("~/Profesional/Gestion de Profesionales.aspx");
+                        Page.Response.Redirect("~/Profesionales/Gestion de Profesionales.aspx");
                     }
 
 

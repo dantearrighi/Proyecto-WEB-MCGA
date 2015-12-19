@@ -5,15 +5,15 @@ using System.Text;
 
 namespace Modelo_Entidades
 {
-    public partial class GCI_AuditoriaContainer
+    public partial class WASSWeb_AuditoriaContainer
     {
-        private static GCI_AuditoriaContainer _Instancia;
+        private static WASSWeb_AuditoriaContainer _Instancia;
 
-        public static GCI_AuditoriaContainer ObtenerInstancia()
+        public static WASSWeb_AuditoriaContainer ObtenerInstancia()
         {
             if (_Instancia == null)
             {
-                _Instancia = new GCI_AuditoriaContainer();
+                _Instancia = new WASSWeb_AuditoriaContainer();
             }
             return _Instancia;
         }

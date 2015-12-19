@@ -9,7 +9,7 @@ namespace Controladora
     {
         // Declaración de variables a usar en la clase
         private static cGrupo instancia;
-        private Modelo_Entidades.GCIEntidades oModelo_Entidades;
+        private Modelo_Entidades.WASSWebEntidades oModelo_Entidades;
 
         //Aplico el patron de diseño Singleton para la clase cGrupo (cuando la solicitan desde otra)
         public static cGrupo ObtenerInstancia()
@@ -23,7 +23,7 @@ namespace Controladora
         // Coloco al constructor como privado.
         private cGrupo()
         {
-            oModelo_Entidades = Modelo_Entidades.GCIEntidades.ObtenerInstancia();
+            oModelo_Entidades = Modelo_Entidades.WASSWebEntidades.ObtenerInstancia();
         }
 
         // Obtengo los grupos

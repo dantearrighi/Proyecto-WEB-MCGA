@@ -7,7 +7,7 @@ namespace Modelo_Entidades
 {
     partial class Usuario
     {
-        Modelo_Entidades.GCIEntidades oModelo_Entidades;
+        Modelo_Entidades.WASSWebEntidades oModelo_Entidades;
         
         public override string ToString()
         {
@@ -16,7 +16,7 @@ namespace Modelo_Entidades
 
         public void Alta(Modelo_Entidades.Usuario oUsuario)
         {
-            oModelo_Entidades = Modelo_Entidades.GCIEntidades.ObtenerInstancia();
+            oModelo_Entidades = Modelo_Entidades.WASSWebEntidades.ObtenerInstancia();
 
             try
             {
@@ -29,7 +29,7 @@ namespace Modelo_Entidades
 
         public void Modificacion(Modelo_Entidades.Usuario oUsuario)
         {
-            oModelo_Entidades = Modelo_Entidades.GCIEntidades.ObtenerInstancia();
+            oModelo_Entidades = Modelo_Entidades.WASSWebEntidades.ObtenerInstancia();
 
             try
             {

@@ -101,9 +101,9 @@
     <Content Include="JS\bootstrap.min.js" />
     <Content Include="JS\custom.js" />
     <Content Include="JS\jquery-1.11.1.min.js" />
-    <Content Include="Profesional\Gestion de Profesionales.aspx" />
-    <Content Include="Profesional\Seleccionar profesional.aspx" />
-    <Content Include="Profesional\Profesional.aspx" />
+    <Content Include="Profesionales\Gestion de Profesionales.aspx" />
+    <Content Include="Profesionales\Seleccionar profesional.aspx" />
+    <Content Include="Profesionales\Profesional.aspx" />
     <Content Include="Seguridad\Cambiar Clave.aspx" />
     <Content Include="Seguridad\Recuperar Clave.aspx" />
     <Content Include="Seguridad\Perfil.aspx" />
@@ -159,25 +159,25 @@
     <Compile Include="Default.Master.designer.cs">
       <DependentUpon>Default.Master</DependentUpon>
     </Compile>
-    <Compile Include="Profesional\Gestion de Profesionales.aspx.cs">
+    <Compile Include="Profesionales\Gestion de Profesionales.aspx.cs">
       <DependentUpon>Gestion de Profesionales.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Profesional\Gestion de Profesionales.aspx.designer.cs">
+    <Compile Include="Profesionales\Gestion de Profesionales.aspx.designer.cs">
       <DependentUpon>Gestion de Profesionales.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Profesional\Seleccionar profesional.aspx.cs">
+    <Compile Include="Profesionales\Seleccionar profesional.aspx.cs">
       <DependentUpon>Seleccionar profesional.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Profesional\Seleccionar profesional.aspx.designer.cs">
+    <Compile Include="Profesionales\Seleccionar profesional.aspx.designer.cs">
       <DependentUpon>Seleccionar profesional.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Profesional\Profesional.aspx.cs">
+    <Compile Include="Profesionales\Profesional.aspx.cs">
       <DependentUpon>Profesional.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Profesional\Profesional.aspx.designer.cs">
+    <Compile Include="Profesionales\Profesional.aspx.designer.cs">
       <DependentUpon>Profesional.aspx</DependentUpon>
     </Compile>
     <Compile Include="Seguridad\Cambiar Clave.aspx.cs">

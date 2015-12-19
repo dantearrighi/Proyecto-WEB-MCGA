@@ -31,7 +31,11 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net40\EntityFramework.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.Entity" />
     <Reference Include="System.Data.Services.Client" />
@@ -44,55 +48,53 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="GCI_Auditoria.Designer.cs">
+    <Compile Include="WASSWeb1.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>GCI_Auditoria.edmx</DependentUpon>
+      <DependentUpon>WASSWeb.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="WASSWeb_Auditoria.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>WASSWeb_Auditoria.edmx</DependentUpon>
     </Compile>
     <Compile Include="Entidades %28Patron Singleton %29\GCI_AuditoriaEntidades.cs" />
-    <Compile Include="Profesionales\Tipo_Certificado.cs" />
     <Compile Include="Profesionales\Tipo_Documento.cs" />
-    <Compile Include="Profesionales\Matricula.cs" />
     <Compile Include="Profesionales\Profesional.cs" />
     <Compile Include="Seguridad\Perfil.cs" />
     <Compile Include="Seguridad\Usuario.cs" />
     <Compile Include="Profesionales\Estado.cs" />
-    <Compile Include="Profesionales\Tipo_Matricula.cs" />
     <Compile Include="Profesionales\Localidad.cs" />
     <Compile Include="Profesionales\Provincia.cs" />
     <Compile Include="Seguridad\Formulario.cs" />
-    <Compile Include="GCI.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>GCI.edmx</DependentUpon>
-    </Compile>
     <Compile Include="Seguridad\Grupo.cs" />
     <Compile Include="Seguridad\Permiso.cs" />
     <Compile Include="Entidades %28Patron Singleton %29\GCIEntidades.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Varios\Auditoria_Log.cs" />
-    <Compile Include="Varios\Auditoria_Cuota.cs" />
-    <Compile Include="Varios\Colegio.cs" />
   </ItemGroup>
   <ItemGroup>
-    <EntityDeploy Include="GCI.edmx">
+    <EntityDeploy Include="WASSWeb.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>GCI.Designer.cs</LastGenOutput>
+      <LastGenOutput>WASSWeb1.Designer.cs</LastGenOutput>
     </EntityDeploy>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.Config" />
-    <EntityDeploy Include="GCI_Auditoria.edmx">
+    <EntityDeploy Include="WASSWeb_Auditoria.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>GCI_Auditoria.Designer.cs</LastGenOutput>
+      <LastGenOutput>WASSWeb_Auditoria.Designer.cs</LastGenOutput>
     </EntityDeploy>
+    <None Include="packages.config" />
     <None Include="Properties\DataSources\GCIEntidades.datasource" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="GCI.edmx.sql" />
-    <Content Include="GCI_Auditoria.edmx.sql" />
+    <Content Include="WASSWeb.edmx.sql" />
+    <Content Include="WASSWeb_Auditoria.edmx.sql" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

@@ -43,17 +43,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Varios\cBackup.cs" />
-    <Compile Include="Varios\cVideo.cs" />
     <Compile Include="Varios\cAuditoria.cs" />
     <Compile Include="Varios\cEncriptacion.cs" />
     <Compile Include="Varios\cVerificacion.cs" />
-    <Compile Include="Profesional\cTipo_Certificado.cs" />
     <Compile Include="Profesional\cEstado.cs" />
     <Compile Include="Profesional\cLocalidad.cs" />
     <Compile Include="Profesional\cProfesional.cs" />
     <Compile Include="Profesional\cProvincia.cs" />
     <Compile Include="Profesional\cTipo_Documento.cs" />
-    <Compile Include="Profesional\cTipo_Matricula.cs" />
     <Compile Include="Seguridad\cFormulario.cs" />
     <Compile Include="Seguridad\cGrupo.cs" />
     <Compile Include="Seguridad\cModulo.cs" />

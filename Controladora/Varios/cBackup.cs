@@ -10,7 +10,7 @@ namespace Controladora
     {
         // Declaro las variables a utilizar en la clase
         private static cBackup instancia;
-        private Modelo_Entidades.GCIEntidades oModelo_Entidades;
+        private Modelo_Entidades.WASSWebEntidades oModelo_Entidades;
         SqlConnection oConnection;
         string ConString;
 
@@ -26,7 +26,7 @@ namespace Controladora
         // Coloco al constructor como privado.
         private cBackup()
         {
-            oModelo_Entidades = Modelo_Entidades.GCIEntidades.ObtenerInstancia();
+            oModelo_Entidades = Modelo_Entidades.WASSWebEntidades.ObtenerInstancia();
         }
 
         public void RealizarBackupSemanal()
