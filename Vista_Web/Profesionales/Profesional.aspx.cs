@@ -279,15 +279,17 @@ namespace Vista_Web
 
                   if (modo == "Alta")
                     {
+                        oProfesional.Estado = cEstado.ObtenerEstadoHabilitado();
+                        oProfesional.observaciones = "no hay observaciones";
                         cProfesional.Alta(oProfesional);                    
                                             
-                        Page.Response.Redirect("~/Profesional/Gestion de Profesionales.aspx");
+                        Page.Response.Redirect("~/Profesionales/Gestion de Profesionales.aspx");
                     }
 
                     else
                     {
                         cProfesional.Modificacion(oProfesional);
-                        Page.Response.Redirect("~/Profesional/Gestion de Profesionales.aspx");
+                        Page.Response.Redirect("~/Profesionales/Gestion de Profesionales.aspx");
                     }
 
 

@@ -25,10 +25,7 @@
                             <label id="Label1" runat="server" for="txt_dni">DNI del profesional</label>
                             <asp:TextBox ID="txt_dni" runat="server" type="text" class="form-control" placeholder="Ingrese el DNI del profesional" OnTextChanged="txt_dni_TextChanged" AutoPostBack="True"></asp:TextBox>
                         </div>
-                        <div id="Div6" runat="server" class="form-group">
-                            <label id="Label2" runat="server" for="txt_num_matricula">Matrícula del profesional</label>
-                            <asp:TextBox ID="txt_num_matricula" runat="server" type="text" class="form-control" placeholder="Ingrese la matrícula del profesional" OnTextChanged="txt_num_matricula_TextChanged" AutoPostBack="True"></asp:TextBox>
-                        </div>
+                       
                         <div runat="server" class="alert alert-warning" role="alert" visible="false" id="message">
                             <button runat="server" type="button" class="close" data-dismiss="alert"><span runat="server" aria-hidden="true">&times;</span><span runat="server" class="sr-only">Cerrar</span></button>
                             <asp:Label ID="lb_error" runat="server" Text="Mensaje"></asp:Label>
