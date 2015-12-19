@@ -1,0 +1,805 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="WASSWebModelo.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="WASSWebModeloStoreContainer">
+    <EntitySet Name="Usuarios" EntityType="WASSWebModelo.Store.Usuarios" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Grupos" EntityType="WASSWebModelo.Store.Grupos" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Perfiles" EntityType="WASSWebModelo.Store.Perfiles" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Permisos" EntityType="WASSWebModelo.Store.Permisos" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Formularios" EntityType="WASSWebModelo.Store.Formularios" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Modulos" EntityType="WASSWebModelo.Store.Modulos" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Profesionales" EntityType="WASSWebModelo.Store.Profesionales" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Localidades" EntityType="WASSWebModelo.Store.Localidades" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Provincias" EntityType="WASSWebModelo.Store.Provincias" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Estados" EntityType="WASSWebModelo.Store.Estados" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Direcciones" EntityType="WASSWebModelo.Store.Direcciones" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Tipos_Documentos" EntityType="WASSWebModelo.Store.Tipos_Documentos" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="UsuariosGrupos" EntityType="WASSWebModelo.Store.UsuarioGrupo" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="FK_UsuariosGrupos_Usuario" Association="WASSWebModelo.Store.FK_UsuarioGrupo_Usuario">
+      <End Role="Usuario" EntitySet="Usuarios" />
+      <End Role="UsuarioGrupo" EntitySet="UsuariosGrupos" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UsuariosGrupos_Grupo" Association="WASSWebModelo.Store.FK_UsuarioGrupo_Grupo">
+      <End Role="Grupo" EntitySet="Grupos" />
+      <End Role="UsuarioGrupo" EntitySet="UsuariosGrupos" />
+    </AssociationSet>
+    <AssociationSet Name="PerfilesGrupos" Association="WASSWebModelo.Store.PerfilGrupo">
+      <End Role="Perfil" EntitySet="Perfiles" />
+      <End Role="Grupo" EntitySet="Grupos" />
+    </AssociationSet>
+    <AssociationSet Name="PerfilesPermisos" Association="WASSWebModelo.Store.PerfilPermiso">
+      <End Role="Perfil" EntitySet="Perfiles" />
+      <End Role="Permiso" EntitySet="Permisos" />
+    </AssociationSet>
+    <AssociationSet Name="PerfilesFormularios" Association="WASSWebModelo.Store.PerfilFormulario">
+      <End Role="Perfil" EntitySet="Perfiles" />
+      <End Role="Formulario" EntitySet="Formularios" />
+    </AssociationSet>
+    <AssociationSet Name="FormulariosModulos" Association="WASSWebModelo.Store.FormularioModulo">
+      <End Role="Formulario" EntitySet="Formularios" />
+      <End Role="Modulo" EntitySet="Modulos" />
+    </AssociationSet>
+    <AssociationSet Name="ProvinciasLocalidades" Association="WASSWebModelo.Store.ProvinciaLocalidades">
+      <End Role="Provincia" EntitySet="Provincias" />
+      <End Role="Localidad" EntitySet="Localidades" />
+    </AssociationSet>
+    <AssociationSet Name="ProfesionalesDirecciones" Association="WASSWebModelo.Store.ProfesionalDirecciones">
+      <End Role="Profesional" EntitySet="Profesionales" />
+      <End Role="Direccion" EntitySet="Direcciones" />
+    </AssociationSet>
+    <AssociationSet Name="Tipos_DocumentosProfesionales" Association="WASSWebModelo.Store.Tipo_DocumentoProfesional">
+      <End Role="Tipo_Documento" EntitySet="Tipos_Documentos" />
+      <End Role="Profesional" EntitySet="Profesionales" />
+    </AssociationSet>
+    <AssociationSet Name="EstadosProfesionales" Association="WASSWebModelo.Store.EstadoProfesional">
+      <End Role="Estado" EntitySet="Estados" />
+      <End Role="Profesional" EntitySet="Profesionales" />
+    </AssociationSet>
+    <AssociationSet Name="LocalidadesDirecciones" Association="WASSWebModelo.Store.LocalidadDireccion">
+      <End Role="Localidad" EntitySet="Localidades" />
+      <End Role="Direccion" EntitySet="Direcciones" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Usuarios">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nombre_apellido" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="clave" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="email" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="estado" Type="bit" Nullable="false" />
+    <Property Name="usuario" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Grupos">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="descripcion" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Perfiles">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Grupo_id" Type="int" Nullable="false" />
+    <Property Name="Permiso_id" Type="int" Nullable="false" />
+    <Property Name="Formulario_id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Permisos">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="descripcion" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Formularios">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="descripcion" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="nombredemuestra" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Modulo_id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Modulos">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="descripcion" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Profesionales">
+    <Key>
+      <PropertyRef Name="dni" />
+    </Key>
+    <Property Name="dni" Type="int" Nullable="false" />
+    <Property Name="nombre_apellido" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="fecha_nacimiento" Type="datetime" Nullable="false" />
+    <Property Name="sexo" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="telefono" Type="int" Nullable="false" />
+    <Property Name="celular" Type="int" Nullable="false" />
+    <Property Name="email1" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="email2" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="observaciones" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="lugar_trabajo" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="Tipo_Documento_id" Type="int" Nullable="false" />
+    <Property Name="Estado_id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Localidades">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nombre" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="cp" Type="int" Nullable="false" />
+    <Property Name="Provincia_id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Provincias">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nombre" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Estados">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="descripcion" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Direcciones">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="direccion" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Profesional_dni" Type="int" Nullable="false" />
+    <Property Name="Localidad_id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Tipos_Documentos">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="descripcion" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="UsuarioGrupo">
+    <Key>
+      <PropertyRef Name="Usuarios_id" />
+      <PropertyRef Name="Grupos_id" />
+    </Key>
+    <Property Name="Usuarios_id" Type="int" Nullable="false" />
+    <Property Name="Grupos_id" Type="int" Nullable="false" />
+  </EntityType>
+  <Association Name="PerfilGrupo">
+    <End Role="Perfil" Type="WASSWebModelo.Store.Perfiles" Multiplicity="*" />
+    <End Role="Grupo" Type="WASSWebModelo.Store.Grupos" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="Grupo">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Perfil">
+        <PropertyRef Name="Grupo_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="PerfilPermiso">
+    <End Role="Perfil" Type="WASSWebModelo.Store.Perfiles" Multiplicity="*" />
+    <End Role="Permiso" Type="WASSWebModelo.Store.Permisos" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="Permiso">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Perfil">
+        <PropertyRef Name="Permiso_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="PerfilFormulario">
+    <End Role="Perfil" Type="WASSWebModelo.Store.Perfiles" Multiplicity="*" />
+    <End Role="Formulario" Type="WASSWebModelo.Store.Formularios" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="Formulario">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Perfil">
+        <PropertyRef Name="Formulario_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FormularioModulo">
+    <End Role="Formulario" Type="WASSWebModelo.Store.Formularios" Multiplicity="*" />
+    <End Role="Modulo" Type="WASSWebModelo.Store.Modulos" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="Modulo">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Formulario">
+        <PropertyRef Name="Modulo_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ProvinciaLocalidades">
+    <End Role="Provincia" Type="WASSWebModelo.Store.Provincias" Multiplicity="1" />
+    <End Role="Localidad" Type="WASSWebModelo.Store.Localidades" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Provincia">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Localidad">
+        <PropertyRef Name="Provincia_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ProfesionalDirecciones">
+    <End Role="Profesional" Type="WASSWebModelo.Store.Profesionales" Multiplicity="1" />
+    <End Role="Direccion" Type="WASSWebModelo.Store.Direcciones" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Profesional">
+        <PropertyRef Name="dni" />
+      </Principal>
+      <Dependent Role="Direccion">
+        <PropertyRef Name="Profesional_dni" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Tipo_DocumentoProfesional">
+    <End Role="Tipo_Documento" Type="WASSWebModelo.Store.Tipos_Documentos" Multiplicity="1" />
+    <End Role="Profesional" Type="WASSWebModelo.Store.Profesionales" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tipo_Documento">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Profesional">
+        <PropertyRef Name="Tipo_Documento_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="EstadoProfesional">
+    <End Role="Estado" Type="WASSWebModelo.Store.Estados" Multiplicity="1" />
+    <End Role="Profesional" Type="WASSWebModelo.Store.Profesionales" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Estado">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Profesional">
+        <PropertyRef Name="Estado_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="LocalidadDireccion">
+    <End Role="Localidad" Type="WASSWebModelo.Store.Localidades" Multiplicity="1" />
+    <End Role="Direccion" Type="WASSWebModelo.Store.Direcciones" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Localidad">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Direccion">
+        <PropertyRef Name="Localidad_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UsuarioGrupo_Usuario">
+    <End Role="Usuario" Type="WASSWebModelo.Store.Usuarios" Multiplicity="1" />
+    <End Role="UsuarioGrupo" Type="WASSWebModelo.Store.UsuarioGrupo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="UsuarioGrupo">
+        <PropertyRef Name="Usuarios_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UsuarioGrupo_Grupo">
+    <End Role="UsuarioGrupo" Type="WASSWebModelo.Store.UsuarioGrupo" Multiplicity="*" />
+    <End Role="Grupo" Type="WASSWebModelo.Store.Grupos" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="Grupo">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="UsuarioGrupo">
+        <PropertyRef Name="Grupos_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="WASSWebModelo" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="WASSWebEntidades" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Usuarios" EntityType="WASSWebModelo.Usuario" />
+          <EntitySet Name="Grupos" EntityType="WASSWebModelo.Grupo" />
+          <AssociationSet Name="UsuariosGrupos" Association="WASSWebModelo.UsuarioGrupo">
+            <End Role="Usuario" EntitySet="Usuarios" />
+            <End Role="Grupo" EntitySet="Grupos" />
+          </AssociationSet>
+          <EntitySet Name="Perfiles" EntityType="WASSWebModelo.Perfil" />
+          <AssociationSet Name="PerfilesGrupos" Association="WASSWebModelo.PerfilGrupo">
+            <End Role="Perfil" EntitySet="Perfiles" />
+            <End Role="Grupo" EntitySet="Grupos" />
+          </AssociationSet>
+          <EntitySet Name="Permisos" EntityType="WASSWebModelo.Permiso" />
+          <AssociationSet Name="PerfilesPermisos" Association="WASSWebModelo.PerfilPermiso">
+            <End Role="Perfil" EntitySet="Perfiles" />
+            <End Role="Permiso" EntitySet="Permisos" />
+          </AssociationSet>
+          <EntitySet Name="Formularios" EntityType="WASSWebModelo.Formulario" />
+          <AssociationSet Name="PerfilesFormularios" Association="WASSWebModelo.PerfilFormulario">
+            <End Role="Perfil" EntitySet="Perfiles" />
+            <End Role="Formulario" EntitySet="Formularios" />
+          </AssociationSet>
+          <EntitySet Name="Modulos" EntityType="WASSWebModelo.Modulo" />
+          <AssociationSet Name="FormulariosModulos" Association="WASSWebModelo.FormularioModulo">
+            <End Role="Formulario" EntitySet="Formularios" />
+            <End Role="Modulo" EntitySet="Modulos" />
+          </AssociationSet>
+          <EntitySet Name="Profesionales" EntityType="WASSWebModelo.Profesional" />
+          <EntitySet Name="Localidades" EntityType="WASSWebModelo.Localidad" />
+          <EntitySet Name="Provincias" EntityType="WASSWebModelo.Provincia" />
+          <AssociationSet Name="ProvinciasLocalidades" Association="WASSWebModelo.ProvinciaLocalidades">
+            <End Role="Provincia" EntitySet="Provincias" />
+            <End Role="Localidad" EntitySet="Localidades" />
+          </AssociationSet>
+          <EntitySet Name="Estados" EntityType="WASSWebModelo.Estado" />
+          <EntitySet Name="Direcciones" EntityType="WASSWebModelo.Direccion" />
+          <AssociationSet Name="ProfesionalesDirecciones" Association="WASSWebModelo.ProfesionalDirecciones">
+            <End Role="Profesional" EntitySet="Profesionales" />
+            <End Role="Direccion" EntitySet="Direcciones" />
+          </AssociationSet>
+          <EntitySet Name="Tipos_Documentos" EntityType="WASSWebModelo.Tipo_Documento" />
+          <AssociationSet Name="Tipos_DocumentosProfesionales" Association="WASSWebModelo.Tipo_DocumentoProfesional">
+            <End Role="Tipo_Documento" EntitySet="Tipos_Documentos" />
+            <End Role="Profesional" EntitySet="Profesionales" />
+          </AssociationSet>
+          <AssociationSet Name="EstadosProfesionales" Association="WASSWebModelo.EstadoProfesional">
+            <End Role="Estado" EntitySet="Estados" />
+            <End Role="Profesional" EntitySet="Profesionales" />
+          </AssociationSet>
+          <AssociationSet Name="LocalidadesDirecciones" Association="WASSWebModelo.LocalidadDireccion">
+            <End Role="Localidad" EntitySet="Localidades" />
+            <End Role="Direccion" EntitySet="Direcciones" />
+          </AssociationSet>
+          </EntityContainer>
+        <EntityType Name="Usuario">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Type="Int32" Name="id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="nombre_apellido" Nullable="false" Type="String" />
+          <Property Type="String" Name="clave" Nullable="false" />
+          <Property Name="email" Nullable="false" Type="String" />
+          <Property Type="Boolean" Name="estado" Nullable="false" />
+          <Property Type="String" Name="usuario" Nullable="false" />
+          <NavigationProperty Name="Grupos" Relationship="WASSWebModelo.UsuarioGrupo" FromRole="Usuario" ToRole="Grupo" />
+        </EntityType>
+        <EntityType Name="Grupo">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Type="Int32" Name="id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="descripcion" Nullable="false" />
+          <NavigationProperty Name="Usuarios" Relationship="WASSWebModelo.UsuarioGrupo" FromRole="Grupo" ToRole="Usuario" />
+          <NavigationProperty Name="Perfiles" Relationship="WASSWebModelo.PerfilGrupo" FromRole="Grupo" ToRole="Perfil" />
+        </EntityType>
+        <Association Name="UsuarioGrupo">
+          <End Type="WASSWebModelo.Usuario" Role="Usuario" Multiplicity="*" >
+          </End>
+          <End Type="WASSWebModelo.Grupo" Role="Grupo" Multiplicity="*" >
+          </End>
+        </Association>
+        <EntityType Name="Perfil">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Type="Int32" Name="id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <NavigationProperty Name="Grupo" Relationship="WASSWebModelo.PerfilGrupo" FromRole="Perfil" ToRole="Grupo" />
+          <NavigationProperty Name="Permiso" Relationship="WASSWebModelo.PerfilPermiso" FromRole="Perfil" ToRole="Permiso" />
+          <NavigationProperty Name="Formulario" Relationship="WASSWebModelo.PerfilFormulario" FromRole="Perfil" ToRole="Formulario" />
+        </EntityType>
+        <Association Name="PerfilGrupo">
+          <End Type="WASSWebModelo.Perfil" Role="Perfil" Multiplicity="*" />
+          <End Type="WASSWebModelo.Grupo" Role="Grupo" Multiplicity="1" />
+        </Association>
+        <EntityType Name="Permiso">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Type="Int32" Name="id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="descripcion" Nullable="false" />
+          <NavigationProperty Name="Perfiles" Relationship="WASSWebModelo.PerfilPermiso" FromRole="Permiso" ToRole="Perfil" />
+        </EntityType>
+        <Association Name="PerfilPermiso">
+          <End Type="WASSWebModelo.Perfil" Role="Perfil" Multiplicity="*" />
+          <End Type="WASSWebModelo.Permiso" Role="Permiso" Multiplicity="1" />
+        </Association>
+        <EntityType Name="Formulario">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Type="Int32" Name="id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="descripcion" Nullable="false" />
+          <NavigationProperty Name="Perfiles" Relationship="WASSWebModelo.PerfilFormulario" FromRole="Formulario" ToRole="Perfil" />
+          <NavigationProperty Name="Modulo" Relationship="WASSWebModelo.FormularioModulo" FromRole="Formulario" ToRole="Modulo" />
+          <Property Type="String" Name="nombredemuestra" Nullable="false" />
+        </EntityType>
+        <Association Name="PerfilFormulario">
+          <End Type="WASSWebModelo.Perfil" Role="Perfil" Multiplicity="*" />
+          <End Type="WASSWebModelo.Formulario" Role="Formulario" Multiplicity="1" />
+        </Association>
+        <EntityType Name="Modulo">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Type="Int32" Name="id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="descripcion" Nullable="false" />
+          <NavigationProperty Name="Formularios" Relationship="WASSWebModelo.FormularioModulo" FromRole="Modulo" ToRole="Formulario" />
+        </EntityType>
+        <Association Name="FormularioModulo">
+          <End Type="WASSWebModelo.Formulario" Role="Formulario" Multiplicity="*" />
+          <End Type="WASSWebModelo.Modulo" Role="Modulo" Multiplicity="1" />
+        </Association>
+        <EntityType Name="Profesional">
+          <Key>
+            <PropertyRef Name="dni" />
+          </Key>
+          <Property Type="Int32" Name="dni" Nullable="false" annotation:StoreGeneratedPattern="None" />
+          <Property Type="String" Name="nombre_apellido" Nullable="false" />
+          <Property Type="DateTime" Name="fecha_nacimiento" Nullable="false" />
+          <Property Type="String" Name="sexo" Nullable="false" />
+          <Property Type="Int32" Name="telefono" Nullable="false" />
+          <Property Type="Int32" Name="celular" Nullable="false" />
+          <Property Type="String" Name="email1" Nullable="false" />
+          <Property Type="String" Name="email2" Nullable="false" />
+          <Property Type="String" Name="observaciones" Nullable="false" />
+          <Property Type="String" Name="lugar_trabajo" />
+          <NavigationProperty Name="Direcciones" Relationship="WASSWebModelo.ProfesionalDirecciones" FromRole="Profesional" ToRole="Direccion" />
+          <NavigationProperty Name="Tipo_Documento" Relationship="WASSWebModelo.Tipo_DocumentoProfesional" FromRole="Profesional" ToRole="Tipo_Documento" />
+          <NavigationProperty Name="Estado" Relationship="WASSWebModelo.EstadoProfesional" FromRole="Profesional" ToRole="Estado" />
+        </EntityType>
+        <EntityType Name="Localidad">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Type="Int32" Name="id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="nombre" Nullable="false" />
+          <NavigationProperty Name="Provincia" Relationship="WASSWebModelo.ProvinciaLocalidades" FromRole="Localidad" ToRole="Provincia" />
+          <Property Type="Int32" Name="cp" Nullable="false" />
+          <NavigationProperty Name="Direcciones" Relationship="WASSWebModelo.LocalidadDireccion" FromRole="Localidad" ToRole="Direccion" />
+        </EntityType>
+        <EntityType Name="Provincia">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Type="Int32" Name="id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <NavigationProperty Name="Localidades" Relationship="WASSWebModelo.ProvinciaLocalidades" FromRole="Provincia" ToRole="Localidad" />
+          <Property Type="String" Name="nombre" Nullable="false" />
+        </EntityType>
+        <Association Name="ProvinciaLocalidades">
+          <End Type="WASSWebModelo.Provincia" Role="Provincia" Multiplicity="1" />
+          <End Type="WASSWebModelo.Localidad" Role="Localidad" Multiplicity="*" />
+        </Association>
+        <EntityType Name="Estado">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Type="Int32" Name="id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="descripcion" Nullable="false" />
+          <NavigationProperty Name="Profesionales" Relationship="WASSWebModelo.EstadoProfesional" FromRole="Estado" ToRole="Profesional" />
+        </EntityType>
+        <EntityType Name="Direccion">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Type="Int32" Name="id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="direccion" Nullable="false" />
+          <NavigationProperty Name="Profesional" Relationship="WASSWebModelo.ProfesionalDirecciones" FromRole="Direccion" ToRole="Profesional" />
+          <NavigationProperty Name="Localidad" Relationship="WASSWebModelo.LocalidadDireccion" FromRole="Direccion" ToRole="Localidad" />
+        </EntityType>
+        <Association Name="ProfesionalDirecciones">
+          <End Type="WASSWebModelo.Profesional" Role="Profesional" Multiplicity="1" />
+          <End Type="WASSWebModelo.Direccion" Role="Direccion" Multiplicity="*" />
+        </Association>
+        <EntityType Name="Tipo_Documento">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Type="Int32" Name="id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="descripcion" Nullable="false" />
+          <NavigationProperty Name="Profesionales" Relationship="WASSWebModelo.Tipo_DocumentoProfesional" FromRole="Tipo_Documento" ToRole="Profesional" />
+        </EntityType>
+        <Association Name="Tipo_DocumentoProfesional">
+          <End Type="WASSWebModelo.Tipo_Documento" Role="Tipo_Documento" Multiplicity="1" />
+          <End Type="WASSWebModelo.Profesional" Role="Profesional" Multiplicity="*" />
+        </Association>
+        <Association Name="EstadoProfesional">
+          <End Type="WASSWebModelo.Estado" Role="Estado" Multiplicity="1" />
+          <End Type="WASSWebModelo.Profesional" Role="Profesional" Multiplicity="*" />
+        </Association>
+        <Association Name="LocalidadDireccion">
+          <End Type="WASSWebModelo.Localidad" Role="Localidad" Multiplicity="1" />
+          <End Type="WASSWebModelo.Direccion" Role="Direccion" Multiplicity="*" />
+        </Association>
+        </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+    <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="WASSWebModeloStoreContainer" CdmEntityContainer="WASSWebEntidades">
+    <EntitySetMapping Name="Usuarios">
+      <EntityTypeMapping TypeName="IsTypeOf(WASSWebModelo.Usuario)">
+        <MappingFragment StoreEntitySet="Usuarios">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="nombre_apellido" ColumnName="nombre_apellido" />
+          <ScalarProperty Name="clave" ColumnName="clave" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="estado" ColumnName="estado" />
+          <ScalarProperty Name="usuario" ColumnName="usuario" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Grupos">
+      <EntityTypeMapping TypeName="IsTypeOf(WASSWebModelo.Grupo)">
+        <MappingFragment StoreEntitySet="Grupos">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Perfiles">
+      <EntityTypeMapping TypeName="IsTypeOf(WASSWebModelo.Perfil)">
+        <MappingFragment StoreEntitySet="Perfiles">
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Permisos">
+      <EntityTypeMapping TypeName="IsTypeOf(WASSWebModelo.Permiso)">
+        <MappingFragment StoreEntitySet="Permisos">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Formularios">
+      <EntityTypeMapping TypeName="IsTypeOf(WASSWebModelo.Formulario)">
+        <MappingFragment StoreEntitySet="Formularios">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+          <ScalarProperty Name="nombredemuestra" ColumnName="nombredemuestra" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Modulos">
+      <EntityTypeMapping TypeName="IsTypeOf(WASSWebModelo.Modulo)">
+        <MappingFragment StoreEntitySet="Modulos">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Profesionales">
+      <EntityTypeMapping TypeName="IsTypeOf(WASSWebModelo.Profesional)">
+        <MappingFragment StoreEntitySet="Profesionales">
+          <ScalarProperty Name="dni" ColumnName="dni" />
+          <ScalarProperty Name="nombre_apellido" ColumnName="nombre_apellido" />
+          <ScalarProperty Name="fecha_nacimiento" ColumnName="fecha_nacimiento" />
+          <ScalarProperty Name="sexo" ColumnName="sexo" />
+          <ScalarProperty Name="telefono" ColumnName="telefono" />
+          <ScalarProperty Name="celular" ColumnName="celular" />
+          <ScalarProperty Name="email1" ColumnName="email1" />
+          <ScalarProperty Name="email2" ColumnName="email2" />
+          <ScalarProperty Name="observaciones" ColumnName="observaciones" />
+          <ScalarProperty Name="lugar_trabajo" ColumnName="lugar_trabajo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Localidades">
+      <EntityTypeMapping TypeName="IsTypeOf(WASSWebModelo.Localidad)">
+        <MappingFragment StoreEntitySet="Localidades">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="cp" ColumnName="cp" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Provincias">
+      <EntityTypeMapping TypeName="IsTypeOf(WASSWebModelo.Provincia)">
+        <MappingFragment StoreEntitySet="Provincias">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Estados">
+      <EntityTypeMapping TypeName="IsTypeOf(WASSWebModelo.Estado)">
+        <MappingFragment StoreEntitySet="Estados">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Direcciones">
+      <EntityTypeMapping TypeName="IsTypeOf(WASSWebModelo.Direccion)">
+        <MappingFragment StoreEntitySet="Direcciones">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="direccion" ColumnName="direccion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tipos_Documentos">
+      <EntityTypeMapping TypeName="IsTypeOf(WASSWebModelo.Tipo_Documento)">
+        <MappingFragment StoreEntitySet="Tipos_Documentos">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="UsuariosGrupos" TypeName="WASSWebModelo.UsuarioGrupo" StoreEntitySet="UsuariosGrupos">
+      <EndProperty Name="Usuario">
+        <ScalarProperty Name="id" ColumnName="Usuarios_id" />
+      </EndProperty>
+      <EndProperty Name="Grupo">
+        <ScalarProperty Name="id" ColumnName="Grupos_id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="PerfilesGrupos" TypeName="WASSWebModelo.PerfilGrupo" StoreEntitySet="Perfiles">
+      <EndProperty Name="Grupo">
+        <ScalarProperty Name="id" ColumnName="Grupo_id" />
+      </EndProperty>
+      <EndProperty Name="Perfil">
+        <ScalarProperty Name="id" ColumnName="id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="PerfilesPermisos" TypeName="WASSWebModelo.PerfilPermiso" StoreEntitySet="Perfiles">
+      <EndProperty Name="Permiso">
+        <ScalarProperty Name="id" ColumnName="Permiso_id" />
+      </EndProperty>
+      <EndProperty Name="Perfil">
+        <ScalarProperty Name="id" ColumnName="id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="PerfilesFormularios" TypeName="WASSWebModelo.PerfilFormulario" StoreEntitySet="Perfiles">
+      <EndProperty Name="Formulario">
+        <ScalarProperty Name="id" ColumnName="Formulario_id" />
+      </EndProperty>
+      <EndProperty Name="Perfil">
+        <ScalarProperty Name="id" ColumnName="id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="FormulariosModulos" TypeName="WASSWebModelo.FormularioModulo" StoreEntitySet="Formularios">
+      <EndProperty Name="Modulo">
+        <ScalarProperty Name="id" ColumnName="Modulo_id" />
+      </EndProperty>
+      <EndProperty Name="Formulario">
+        <ScalarProperty Name="id" ColumnName="id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="ProvinciasLocalidades" TypeName="WASSWebModelo.ProvinciaLocalidades" StoreEntitySet="Localidades">
+      <EndProperty Name="Provincia">
+        <ScalarProperty Name="id" ColumnName="Provincia_id" />
+      </EndProperty>
+      <EndProperty Name="Localidad">
+        <ScalarProperty Name="id" ColumnName="id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="ProfesionalesDirecciones" TypeName="WASSWebModelo.ProfesionalDirecciones" StoreEntitySet="Direcciones">
+      <EndProperty Name="Profesional">
+        <ScalarProperty Name="dni" ColumnName="Profesional_dni" />
+      </EndProperty>
+      <EndProperty Name="Direccion">
+        <ScalarProperty Name="id" ColumnName="id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="Tipos_DocumentosProfesionales" TypeName="WASSWebModelo.Tipo_DocumentoProfesional" StoreEntitySet="Profesionales">
+      <EndProperty Name="Tipo_Documento">
+        <ScalarProperty Name="id" ColumnName="Tipo_Documento_id" />
+      </EndProperty>
+      <EndProperty Name="Profesional">
+        <ScalarProperty Name="dni" ColumnName="dni" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="EstadosProfesionales" TypeName="WASSWebModelo.EstadoProfesional" StoreEntitySet="Profesionales">
+      <EndProperty Name="Estado">
+        <ScalarProperty Name="id" ColumnName="Estado_id" />
+      </EndProperty>
+      <EndProperty Name="Profesional">
+        <ScalarProperty Name="dni" ColumnName="dni" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="LocalidadesDirecciones" TypeName="WASSWebModelo.LocalidadDireccion" StoreEntitySet="Direcciones">
+      <EndProperty Name="Localidad">
+        <ScalarProperty Name="id" ColumnName="Localidad_id" />
+      </EndProperty>
+      <EndProperty Name="Direccion">
+        <ScalarProperty Name="id" ColumnName="id" />
+      </EndProperty>
+    </AssociationSetMapping>
+  </EntityContainerMapping>
+</Mapping></edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+        <DesignerProperty Name="UseLegacyProvider" Value="True" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Predeterminado" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams>
+      <Diagram Name="GCI" ZoomLevel="74" ShowGrid="true" DisplayType="false">
+        <EntityTypeShape EntityType="WASSWebModelo.Usuario" Width="1.5" PointX="0.75" PointY="2.875" Height="2.085348307291667" />
+        <EntityTypeShape EntityType="WASSWebModelo.Grupo" Width="1.5" PointX="0.75" PointY="0.5" Height="1.5923063151041665" />
+        <AssociationConnector Association="WASSWebModelo.UsuarioGrupo">
+          <ConnectorPoint PointX="1.5" PointY="2.875" />
+          <ConnectorPoint PointX="1.5" PointY="2.0923063151041665" />
+        </AssociationConnector>
+        <EntityTypeShape EntityType="WASSWebModelo.Perfil" Width="1.5" PointX="2.875" PointY="0.5" Height="1.5923063151041665" />
+        <AssociationConnector Association="WASSWebModelo.PerfilGrupo">
+          <ConnectorPoint PointX="2.875" PointY="1.2961531575520833" />
+          <ConnectorPoint PointX="2.25" PointY="1.2961531575520833" />
+        </AssociationConnector>
+        <EntityTypeShape EntityType="WASSWebModelo.Permiso" Width="1.5" PointX="5.375" PointY="0.5" Height="1.427958984375" />
+        <AssociationConnector Association="WASSWebModelo.PerfilPermiso">
+          <ConnectorPoint PointX="4.375" PointY="1.2139794921875" />
+          <ConnectorPoint PointX="5.375" PointY="1.2139794921875" />
+        </AssociationConnector>
+        <EntityTypeShape EntityType="WASSWebModelo.Formulario" Width="1.5" PointX="2.875" PointY="2.875" Height="1.7566536458333326" />
+        <AssociationConnector Association="WASSWebModelo.PerfilFormulario">
+          <ConnectorPoint PointX="3.625" PointY="2.0923063151041665" />
+          <ConnectorPoint PointX="3.625" PointY="2.875" />
+        </AssociationConnector>
+        <EntityTypeShape EntityType="WASSWebModelo.Modulo" Width="1.5" PointX="5.375" PointY="2.875" Height="1.4279589843749996" />
+        <AssociationConnector Association="WASSWebModelo.FormularioModulo">
+          <ConnectorPoint PointX="4.375" PointY="3.5889794921875" />
+          <ConnectorPoint PointX="5.375" PointY="3.5889794921875" />
+        </AssociationConnector>
+        <EntityTypeShape EntityType="WASSWebModelo.Profesional" Width="1.875" PointX="11" PointY="2.125" Height="5.2494108072916656" />
+        <EntityTypeShape EntityType="WASSWebModelo.Localidad" Width="1.875" PointX="8" PointY="3.375" Height="1.9802864583333335" />
+        <EntityTypeShape EntityType="WASSWebModelo.Provincia" Width="1.875" PointX="8" PointY="1" Height="1.5956835937499996" />
+        <AssociationConnector Association="WASSWebModelo.ProvinciaLocalidades">
+          <ConnectorPoint PointX="1.6875" PointY="9.97068359375" />
+          <ConnectorPoint PointX="1.6875" PointY="10.75" />
+        </AssociationConnector>
+        <EntityTypeShape EntityType="WASSWebModelo.Estado" Width="1.875" PointX="14" PointY="2.5" Height="1.5956835937499996" />
+        <EntityTypeShape EntityType="WASSWebModelo.Direccion" Width="1.875" PointX="8" PointY="6.125" Height="1.7879850260416674" />
+        <AssociationConnector Association="WASSWebModelo.ProfesionalDirecciones">
+          <ConnectorPoint PointX="11.0625" PointY="13.124410807291666" />
+          <ConnectorPoint PointX="11.0625" PointY="14.797841796874998" />
+          <ConnectorPoint PointX="10.645830833333333" PointY="14.797841796874998" />
+          <ConnectorPoint PointX="10.479164166666665" PointY="14.797841796874998" />
+          <ConnectorPoint PointX="2.625" PointY="14.797841796874998" />
+        </AssociationConnector>
+        <EntityTypeShape EntityType="WASSWebModelo.Tipo_Documento" Width="1.875" PointX="14" PointY="0.75" Height="1.5956835937499996" IsExpanded="true" />
+        <AssociationConnector Association="WASSWebModelo.Tipo_DocumentoProfesional">
+          <ConnectorPoint PointX="5.25" PointY="8.172841796874998" />
+          <ConnectorPoint PointX="10.125" PointY="8.172841796874998" />
+        </AssociationConnector>
+        <AssociationConnector Association="WASSWebModelo.EstadoProfesional">
+          <ConnectorPoint PointX="5.25" PointY="9.422841796875" />
+          <ConnectorPoint PointX="10.125" PointY="9.422841796875" />
+        </AssociationConnector>
+        <AssociationConnector Association="WASSWebModelo.LocalidadDireccion">
+          <ConnectorPoint PointX="1.6875" PointY="12.730286458333334" />
+          <ConnectorPoint PointX="1.6875" PointY="13.5" />
+        </AssociationConnector>
+        </Diagram>
+    </Diagrams>
+  </Designer>
+</edmx:Edmx>

@@ -10,7 +10,7 @@ namespace Controladora
     {
         // Declaro las variables a utilizar en la clase
         private static cUsuario instancia;
-        private Modelo_Entidades.GCIEntidades oModelo_Entidades;
+        private Modelo_Entidades.WASSWebEntidades oModelo_Entidades;
         Controladora.cEncriptacion cEncriptacion = new cEncriptacion();
 
         // Aplico el patrón de diseño Singleton a la clase
@@ -25,7 +25,7 @@ namespace Controladora
         // Coloco al constructor como privado.
         private cUsuario()
         {
-            oModelo_Entidades = Modelo_Entidades.GCIEntidades.ObtenerInstancia();
+            oModelo_Entidades = Modelo_Entidades.WASSWebEntidades.ObtenerInstancia();
         }
 
         // Busco al usuario 

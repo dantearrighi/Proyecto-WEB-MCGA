@@ -9,7 +9,7 @@ namespace Controladora
     {
         // Declaro las variables a utilizar en la clase
         private static cProfesional instancia;
-        private Modelo_Entidades.GCIEntidades oModelo_Entidades;
+        private Modelo_Entidades.WASSWebEntidades oModelo_Entidades;
 
         // Aplico el patrón de diseño Singleton a la clase
         public static cProfesional ObtenerInstancia()
@@ -23,7 +23,7 @@ namespace Controladora
         // Coloco al constructor como privado.
         private cProfesional()
         {
-            oModelo_Entidades = Modelo_Entidades.GCIEntidades.ObtenerInstancia();
+            oModelo_Entidades = Modelo_Entidades.WASSWebEntidades.ObtenerInstancia();
         }
 
         // Dar de alta a un nuevo profesional
@@ -53,14 +53,7 @@ namespace Controladora
             return (List<Modelo_Entidades.Profesional>)Consulta.ToList();
         }
 
-        // Voy filtrando a los profesionales según el número de matrícula introducido
-        public List<Modelo_Entidades.Profesional> FiltrarPorICIE(string icie)
-        {
-            var Consulta = from oMatricula in oModelo_Entidades.Matriculas.ToList()
-                           where oMatricula.icie.Contains(icie)
-                           select oMatricula.Profesional;
-            return (List<Modelo_Entidades.Profesional>)Consulta.ToList();
-        }
+        
 
         // Voy filtrando a los profesionales según el apellido y nombre introducido
         public List<Modelo_Entidades.Profesional> FiltrarPorNyA(string nya)
@@ -101,40 +94,11 @@ namespace Controladora
             return oProfesional;
         }
 
-        // Obtengo los profesionales dado un curso
-        public List<Modelo_Entidades.Profesional> ObtenerProfesionalesPorCurso(int clase_id)
-        {
-            var Consulta = from oAsistencia in oModelo_Entidades.Asistencias.ToList()
-                           where oAsistencia.Clase.id == clase_id
-                           select oAsistencia.Profesional;
-            return (List<Modelo_Entidades.Profesional>)Consulta.ToList();
-        }
+      
 
-        // Obtengo los profesionales de con tipo de matrícula normal
-        public List<Modelo_Entidades.Profesional> ObtenerProfesionalesNormales()
-        {
-            var Consulta = from oProfesional in oModelo_Entidades.Profesionales.ToList()
-                           where oProfesional.Tipo_Matricula.descripcion == "Normal"
-                           select oProfesional;
-            return (List<Modelo_Entidades.Profesional>)Consulta.ToList();
-        }
+  
 
-        // Obtengo los profesionales de con tipo de matrícula normal
-        public List<Modelo_Entidades.Profesional> ObtenerProfesionalesEnRelacionDeDependencia()
-        {
-            var Consulta = from oProfesional in oModelo_Entidades.Profesionales.ToList()
-                           where oProfesional.Tipo_Matricula.descripcion == "Relación de Dependencia"
-                           select oProfesional;
-            return (List<Modelo_Entidades.Profesional>)Consulta.ToList();
-        }
-
-        // Obtengo los profesionales de con tipo de matrícula normal
-        public List<Modelo_Entidades.Profesional> ObtenerProfesionalesEnReciprocidadDeMatricula()
-        {
-            var Consulta = from oProfesional in oModelo_Entidades.Profesionales.ToList()
-                           where oProfesional.Tipo_Matricula.descripcion == "Reciprocidad de Matrícula" && oProfesional.convenio_año == DateTime.Now.Year
-                           select oProfesional;
-            return (List<Modelo_Entidades.Profesional>)Consulta.ToList();
-        }
+      
+    
     }
 }

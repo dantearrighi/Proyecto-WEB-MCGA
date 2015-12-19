@@ -7,11 +7,11 @@ namespace Modelo_Entidades
 {
     partial class Perfil
     {
-        Modelo_Entidades.GCIEntidades oModelo_Entidades;
+        Modelo_Entidades.WASSWebEntidades oModelo_Entidades;
 
         public void Alta(Modelo_Entidades.Perfil oPerfil)
         {
-            oModelo_Entidades = Modelo_Entidades.GCIEntidades.ObtenerInstancia();
+            oModelo_Entidades = Modelo_Entidades.WASSWebEntidades.ObtenerInstancia();
 
             try
             {
@@ -24,7 +24,7 @@ namespace Modelo_Entidades
 
         public void Baja(Modelo_Entidades.Perfil oPerfil)
         {
-            oModelo_Entidades = Modelo_Entidades.GCIEntidades.ObtenerInstancia();
+            oModelo_Entidades = Modelo_Entidades.WASSWebEntidades.ObtenerInstancia();
 
             try
             {

@@ -49,8 +49,7 @@ namespace Vista_Web
         Modelo_Entidades.Localidad oLocalidad;
         Modelo_Entidades.Provincia oProvincia;
 
-        List<Modelo_Entidades.Movimiento> ListaMovimientos = new List<Modelo_Entidades.Movimiento>();
-        
+      
 
         List<Modelo_Entidades.Tipo_Documento> lTipoDocumentos;
         List<Modelo_Entidades.Provincia> lProvincias;

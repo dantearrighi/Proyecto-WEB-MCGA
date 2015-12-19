@@ -133,12 +133,7 @@ namespace Vista_Web
             e.Row.Cells[12].Visible = false;
         }
 
-        protected void txt_num_matricula_TextChanged(object sender, EventArgs e)
-        {
-            lProfesionales = cProfesional.FiltrarPorICIE(txt_num_matricula.Text);
-            gvProfesionales.DataSource = lProfesionales;
-            gvProfesionales.DataBind();
-        }
+        
 
         protected void txt_dni_TextChanged(object sender, EventArgs e)
         {
