@@ -4,7 +4,8 @@ use WASSWeb
 insert into Usuarios values
 ('Dante Arrighi', 'd', 'dantearrighi@gmail.com', 1, 'd'),
 ('Adrian Molinero', 'a','adigmo@gmail.com',2,'a'),
-('Administrador del Sistema', '0DPiKuNIrrVmD8IUCuw1hQxNqZc=', 'dantearrighi@gmail.com',1,'admin')
+('Administrador del Sistema', '0DPiKuNIrrVmD8IUCuw1hQxNqZc=', 'dantearrighi@gmail.com',1,'admin'),
+('Luciano Diamand','jpJoKdhW6P6MTn18TLZgrcQIbeE=','dantearrighi@gmail.com',2,'lucianod')
 
 insert into Grupos values
 ('Administrador'),
@@ -13,7 +14,8 @@ insert into Grupos values
 insert into UsuariosGrupos values 
 (1,1),
 (2,1),
-(3,1)
+(3,1),
+(4,2)
 
 
 
