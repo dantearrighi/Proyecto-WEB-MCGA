@@ -43,30 +43,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Varios\cBackup.cs" />
-    <Compile Include="Cta Cte\cComprobante.cs" />
     <Compile Include="Varios\cVideo.cs" />
-    <Compile Include="Expediente\cComitente.cs" />
-    <Compile Include="Expediente\cExpediente.cs" />
-    <Compile Include="Expediente\cLiquidacion.cs" />
-    <Compile Include="Expediente\cTarea.cs" />
-    <Compile Include="Cursos\cAsistencia.cs" />
-    <Compile Include="Cursos\cClase.cs" />
-    <Compile Include="Cursos\cComision.cs" />
-    <Compile Include="Cursos\cCurso.cs" />
-    <Compile Include="Cursos\cDocente.cs" />
-    <Compile Include="Cta Cte\cCtaCte.cs" />
-    <Compile Include="Cuotas\cAlterador.cs" />
-    <Compile Include="Cuotas\cCuota.cs" />
-    <Compile Include="Cta Cte\cMovimiento.cs" />
-    <Compile Include="Cta Cte\cTipo_Movimiento.cs" />
     <Compile Include="Varios\cAuditoria.cs" />
     <Compile Include="Varios\cEncriptacion.cs" />
-    <Compile Include="Titulo\cLegajo_Academico.cs" />
-    <Compile Include="Profesional\cMatricula.cs" />
     <Compile Include="Varios\cVerificacion.cs" />
-    <Compile Include="Titulo\cPlan.cs" />
     <Compile Include="Profesional\cTipo_Certificado.cs" />
-    <Compile Include="Profesional\cColegio.cs" />
     <Compile Include="Profesional\cEstado.cs" />
     <Compile Include="Profesional\cLocalidad.cs" />
     <Compile Include="Profesional\cProfesional.cs" />
@@ -80,12 +61,6 @@
     <Compile Include="Seguridad\cUsuario.cs" />
     <Compile Include="Seguridad\cPerfil.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Titulo\cEspecialidad.cs" />
-    <Compile Include="Titulo\cJurisdiccion.cs" />
-    <Compile Include="Titulo\cModalidad.cs" />
-    <Compile Include="Titulo\cNivel.cs" />
-    <Compile Include="Titulo\cTitulo.cs" />
-    <Compile Include="Titulo\cUniversidad.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Modelo_Entidades\Modelo_Entidades.csproj">

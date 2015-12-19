@@ -8,8 +8,6 @@ using System.Text.RegularExpressions;
 using AjaxControlToolkit;
 using System.Data;
 using System.Drawing;
-using Vista_Web.App_Code.BoletasTableAdapters;
-using Vista_Web.App_Code;
 using Microsoft.Reporting.WebForms;
 
 namespace Vista_Web

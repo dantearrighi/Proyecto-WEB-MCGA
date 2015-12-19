@@ -88,19 +88,9 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Auditorias\Gestion de Auditorías de Cuotas.aspx" />
     <Content Include="Auditorias\Gestion de Auditorías.aspx" />
     <Content Include="Auditorias\Auditoria.aspx" />
     <Content Include="Botoneras\Botonera1.ascx" />
-    <Content Include="Estadísticas\FrmListado_Expte_Obra.aspx" />
-    <Content Include="Estadísticas\FrmListado_Expte_Monto_Esp.aspx" />
-    <Content Include="Estadísticas\FrmListado_Expte_Esp.aspx" />
-    <Content Include="Estadísticas\FrmListado_Cuotas_Desc.aspx" />
-    <Content Include="Estadísticas\FrmListado_Cuotas_Esp.aspx" />
-    <Content Include="Estadísticas\FrmListado_Tit_Esp.aspx" />
-    <Content Include="Estadísticas\FrmListado_Tit_Uni.aspx" />
-    <Content Include="Estadísticas\FrmListado_Prof_TM.aspx" />
-    <Content Include="Estadísticas\FrmListado_Mat_Esp.aspx" />
     <Content Include="Estadísticas\Estadísticas.aspx" />
     <Content Include="Estadísticas\FrmListado_Prof_Est.aspx" />
     <Content Include="CSS\bootstrap-theme.css" />
@@ -111,10 +101,8 @@
     <Content Include="JS\bootstrap.min.js" />
     <Content Include="JS\custom.js" />
     <Content Include="JS\jquery-1.11.1.min.js" />
-    <Content Include="Profesional\FrmImprimirCertificado.aspx" />
     <Content Include="Profesional\Gestion de Profesionales.aspx" />
     <Content Include="Profesional\Seleccionar profesional.aspx" />
-    <Content Include="Profesional\Matriculas Profesional.aspx" />
     <Content Include="Profesional\Profesional.aspx" />
     <Content Include="Seguridad\Cambiar Clave.aspx" />
     <Content Include="Seguridad\Recuperar Clave.aspx" />
@@ -126,96 +114,9 @@
     <Content Include="Principal.aspx" />
     <Content Include="Seguridad\Gestion de Usuarios.aspx" />
     <Content Include="Seguridad\Usuario.aspx" />
-    <Content Include="Tareas\Tarea.aspx" />
-    <Content Include="Titulos\FrmImprimirTitulo.aspx" />
-    <Content Include="Titulos\Gestion de Titulos.aspx" />
-    <Content Include="Titulos\Planes Titulo.aspx" />
-    <Content Include="Titulos\Titulo.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Code\Boletas_Prof.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Boletas_Prof.xsd</DependentUpon>
-    </Content>
-    <Content Include="App_Code\Certificado_Prof.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Certificado_Prof.xsd</DependentUpon>
-    </Content>
-    <Content Include="App_Code\Certificado_Prof_I.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Certificado_Prof_I.xsd</DependentUpon>
-    </Content>
-    <Content Include="App_Code\Titulos.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Titulos.xsd</DependentUpon>
-    </Content>
-    <Content Include="App_Code\Recibos.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Recibos.xsd</DependentUpon>
-    </Content>
-    <Content Include="App_Code\Listados_Prof_Est.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Listados_Prof_Est.xsd</DependentUpon>
-    </Content>
-    <Content Include="App_Code\Listados_Mat_Esp.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Listados_Mat_Esp.xsd</DependentUpon>
-    </Content>
-    <Content Include="App_Code\Listados_Prof_TM.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Listados_Prof_TM.xsd</DependentUpon>
-    </Content>
-    <Content Include="App_Code\Listados_Tit_Uni.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Listados_Tit_Uni.xsd</DependentUpon>
-    </Content>
-    <Content Include="App_Code\Listado_Tit_Esp.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Listado_Tit_Esp.xsd</DependentUpon>
-    </Content>
-    <Content Include="App_Code\Listado_Cuotas_Esp.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Listado_Cuotas_Esp.xsd</DependentUpon>
-    </Content>
-    <Content Include="App_Code\Listados_Cuotas_Desc.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Listados_Cuotas_Desc.xsd</DependentUpon>
-    </Content>
-    <Content Include="App_Code\Listado_Expte_Esp.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Listado_Expte_Esp.xsd</DependentUpon>
-    </Content>
-    <Content Include="App_Code\Listado_Exptes_Monto_Esp.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Listado_Exptes_Monto_Esp.xsd</DependentUpon>
-    </Content>
-    <Content Include="App_Code\Listados_Expte_Obra.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Listados_Expte_Obra.xsd</DependentUpon>
-    </Content>
-    <Compile Include="Auditorias\Gestion de Auditorías de Cuotas.aspx.cs">
-      <DependentUpon>Gestion de Auditorías de Cuotas.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Auditorias\Gestion de Auditorías de Cuotas.aspx.designer.cs">
-      <DependentUpon>Gestion de Auditorías de Cuotas.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Auditorias\Gestion de Auditorías.aspx.cs">
       <DependentUpon>Gestion de Auditorías.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -230,84 +131,12 @@
     <Compile Include="Auditorias\Auditoria.aspx.designer.cs">
       <DependentUpon>Auditoria.aspx</DependentUpon>
     </Compile>
-    <Compile Include="App_Code\Boletas.cs">
-      <DependentUpon>Boletas.xsd</DependentUpon>
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="App_Code\Boletas.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Boletas.xsd</DependentUpon>
-    </Compile>
     <Compile Include="Botoneras\Botonera1.ascx.cs">
       <DependentUpon>Botonera1.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Botoneras\Botonera1.ascx.designer.cs">
       <DependentUpon>Botonera1.ascx</DependentUpon>
-    </Compile>
-    <Compile Include="Estadísticas\FrmListado_Expte_Obra.aspx.cs">
-      <DependentUpon>FrmListado_Expte_Obra.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Estadísticas\FrmListado_Expte_Obra.aspx.designer.cs">
-      <DependentUpon>FrmListado_Expte_Obra.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Estadísticas\FrmListado_Expte_Monto_Esp.aspx.cs">
-      <DependentUpon>FrmListado_Expte_Monto_Esp.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Estadísticas\FrmListado_Expte_Monto_Esp.aspx.designer.cs">
-      <DependentUpon>FrmListado_Expte_Monto_Esp.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Estadísticas\FrmListado_Expte_Esp.aspx.cs">
-      <DependentUpon>FrmListado_Expte_Esp.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Estadísticas\FrmListado_Expte_Esp.aspx.designer.cs">
-      <DependentUpon>FrmListado_Expte_Esp.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Estadísticas\FrmListado_Cuotas_Desc.aspx.cs">
-      <DependentUpon>FrmListado_Cuotas_Desc.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Estadísticas\FrmListado_Cuotas_Desc.aspx.designer.cs">
-      <DependentUpon>FrmListado_Cuotas_Desc.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Estadísticas\FrmListado_Cuotas_Esp.aspx.cs">
-      <DependentUpon>FrmListado_Cuotas_Esp.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Estadísticas\FrmListado_Cuotas_Esp.aspx.designer.cs">
-      <DependentUpon>FrmListado_Cuotas_Esp.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Estadísticas\FrmListado_Tit_Esp.aspx.cs">
-      <DependentUpon>FrmListado_Tit_Esp.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Estadísticas\FrmListado_Tit_Esp.aspx.designer.cs">
-      <DependentUpon>FrmListado_Tit_Esp.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Estadísticas\FrmListado_Tit_Uni.aspx.cs">
-      <DependentUpon>FrmListado_Tit_Uni.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Estadísticas\FrmListado_Tit_Uni.aspx.designer.cs">
-      <DependentUpon>FrmListado_Tit_Uni.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Estadísticas\FrmListado_Prof_TM.aspx.cs">
-      <DependentUpon>FrmListado_Prof_TM.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Estadísticas\FrmListado_Prof_TM.aspx.designer.cs">
-      <DependentUpon>FrmListado_Prof_TM.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Estadísticas\FrmListado_Mat_Esp.aspx.cs">
-      <DependentUpon>FrmListado_Mat_Esp.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Estadísticas\FrmListado_Mat_Esp.aspx.designer.cs">
-      <DependentUpon>FrmListado_Mat_Esp.aspx</DependentUpon>
     </Compile>
     <Compile Include="Estadísticas\Estadísticas.aspx.cs">
       <DependentUpon>Estadísticas.aspx</DependentUpon>
@@ -330,13 +159,6 @@
     <Compile Include="Default.Master.designer.cs">
       <DependentUpon>Default.Master</DependentUpon>
     </Compile>
-    <Compile Include="Profesional\FrmImprimirCertificado.aspx.cs">
-      <DependentUpon>FrmImprimirCertificado.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Profesional\FrmImprimirCertificado.aspx.designer.cs">
-      <DependentUpon>FrmImprimirCertificado.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Profesional\Gestion de Profesionales.aspx.cs">
       <DependentUpon>Gestion de Profesionales.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -350,13 +172,6 @@
     </Compile>
     <Compile Include="Profesional\Seleccionar profesional.aspx.designer.cs">
       <DependentUpon>Seleccionar profesional.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Profesional\Matriculas Profesional.aspx.cs">
-      <DependentUpon>Matriculas Profesional.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Profesional\Matriculas Profesional.aspx.designer.cs">
-      <DependentUpon>Matriculas Profesional.aspx</DependentUpon>
     </Compile>
     <Compile Include="Profesional\Profesional.aspx.cs">
       <DependentUpon>Profesional.aspx</DependentUpon>
@@ -436,223 +251,12 @@
     <Compile Include="Seguridad\Usuario.aspx.designer.cs">
       <DependentUpon>Usuario.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Tareas\Tarea.aspx.cs">
-      <DependentUpon>Tarea.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Tareas\Tarea.aspx.designer.cs">
-      <DependentUpon>Tarea.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Titulos\FrmImprimirTitulo.aspx.cs">
-      <DependentUpon>FrmImprimirTitulo.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Titulos\FrmImprimirTitulo.aspx.designer.cs">
-      <DependentUpon>FrmImprimirTitulo.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Titulos\Gestion de Titulos.aspx.cs">
-      <DependentUpon>Gestion de Titulos.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Titulos\Gestion de Titulos.aspx.designer.cs">
-      <DependentUpon>Gestion de Titulos.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Titulos\Planes Titulo.aspx.cs">
-      <DependentUpon>Planes Titulo.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Titulos\Planes Titulo.aspx.designer.cs">
-      <DependentUpon>Planes Titulo.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Titulos\Titulo.aspx.cs">
-      <DependentUpon>Titulo.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Titulos\Titulo.aspx.designer.cs">
-      <DependentUpon>Titulo.aspx</DependentUpon>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Default.Master" />
     <Content Include="packages.config" />
     <Content Include="CSS\bootstrap-theme.css.map" />
     <Content Include="CSS\bootstrap.css.map" />
-    <Content Include="App_Code\Boletas.xsc">
-      <DependentUpon>Boletas.xsd</DependentUpon>
-    </Content>
-    <None Include="App_Code\Boletas.xsd">
-      <SubType>Designer</SubType>
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>Boletas.Designer.cs</LastGenOutput>
-    </None>
-    <Content Include="App_Code\Boletas.xss">
-      <DependentUpon>Boletas.xsd</DependentUpon>
-    </Content>
-    <Content Include="App_Code\Boletas_Prof.xsc">
-      <DependentUpon>Boletas_Prof.xsd</DependentUpon>
-    </Content>
-    <None Include="App_Code\Boletas_Prof.xsd">
-      <SubType>Designer</SubType>
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>Boletas_Prof.Designer.cs</LastGenOutput>
-    </None>
-    <Content Include="App_Code\Boletas_Prof.xss">
-      <DependentUpon>Boletas_Prof.xsd</DependentUpon>
-    </Content>
-    <Content Include="App_Code\Certificado_Prof.xsc">
-      <DependentUpon>Certificado_Prof.xsd</DependentUpon>
-    </Content>
-    <None Include="App_Code\Certificado_Prof.xsd">
-      <SubType>Designer</SubType>
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>Certificado_Prof.Designer.cs</LastGenOutput>
-    </None>
-    <Content Include="App_Code\Certificado_Prof.xss">
-      <DependentUpon>Certificado_Prof.xsd</DependentUpon>
-    </Content>
-    <Content Include="App_Code\Certificado_Prof_I.xsc">
-      <DependentUpon>Certificado_Prof_I.xsd</DependentUpon>
-    </Content>
-    <None Include="App_Code\Certificado_Prof_I.xsd">
-      <SubType>Designer</SubType>
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>Certificado_Prof_I.Designer.cs</LastGenOutput>
-    </None>
-    <Content Include="App_Code\Certificado_Prof_I.xss">
-      <DependentUpon>Certificado_Prof_I.xsd</DependentUpon>
-    </Content>
-    <Content Include="App_Code\Titulos.xsc">
-      <DependentUpon>Titulos.xsd</DependentUpon>
-    </Content>
-    <Content Include="App_Code\Recibos.xsc">
-      <DependentUpon>Recibos.xsd</DependentUpon>
-    </Content>
-    <Content Include="App_Code\Listados_Prof_Est.xsc">
-      <DependentUpon>Listados_Prof_Est.xsd</DependentUpon>
-    </Content>
-    <Content Include="App_Code\Listados_Mat_Esp.xsc">
-      <DependentUpon>Listados_Mat_Esp.xsd</DependentUpon>
-    </Content>
-    <Content Include="App_Code\Listados_Cuotas_Desc.xsc">
-      <DependentUpon>Listados_Cuotas_Desc.xsd</DependentUpon>
-    </Content>
-    <None Include="App_Code\Listados_Cuotas_Desc.xsd">
-      <SubType>Designer</SubType>
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>Listados_Cuotas_Desc.Designer.cs</LastGenOutput>
-    </None>
-    <Content Include="App_Code\Listados_Cuotas_Desc.xss">
-      <DependentUpon>Listados_Cuotas_Desc.xsd</DependentUpon>
-    </Content>
-    <Content Include="App_Code\Listados_Expte_Obra.xsc">
-      <DependentUpon>Listados_Expte_Obra.xsd</DependentUpon>
-    </Content>
-    <None Include="App_Code\Listados_Expte_Obra.xsd">
-      <SubType>Designer</SubType>
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>Listados_Expte_Obra.Designer.cs</LastGenOutput>
-    </None>
-    <Content Include="App_Code\Listados_Expte_Obra.xss">
-      <DependentUpon>Listados_Expte_Obra.xsd</DependentUpon>
-    </Content>
-    <None Include="App_Code\Listados_Mat_Esp.xsd">
-      <SubType>Designer</SubType>
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>Listados_Mat_Esp.Designer.cs</LastGenOutput>
-    </None>
-    <Content Include="App_Code\Listados_Mat_Esp.xss">
-      <DependentUpon>Listados_Mat_Esp.xsd</DependentUpon>
-    </Content>
-    <None Include="App_Code\Listados_Prof_Est.xsd">
-      <SubType>Designer</SubType>
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>Listados_Prof_Est.Designer.cs</LastGenOutput>
-    </None>
-    <Content Include="App_Code\Listados_Prof_Est.xss">
-      <DependentUpon>Listados_Prof_Est.xsd</DependentUpon>
-    </Content>
-    <Content Include="App_Code\Listados_Prof_TM.xsc">
-      <DependentUpon>Listados_Prof_TM.xsd</DependentUpon>
-    </Content>
-    <None Include="App_Code\Listados_Prof_TM.xsd">
-      <SubType>Designer</SubType>
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>Listados_Prof_TM.Designer.cs</LastGenOutput>
-    </None>
-    <Content Include="App_Code\Listados_Prof_TM.xss">
-      <DependentUpon>Listados_Prof_TM.xsd</DependentUpon>
-    </Content>
-    <Content Include="App_Code\Listados_Tit_Uni.xsc">
-      <DependentUpon>Listados_Tit_Uni.xsd</DependentUpon>
-    </Content>
-    <None Include="App_Code\Listados_Tit_Uni.xsd">
-      <SubType>Designer</SubType>
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>Listados_Tit_Uni.Designer.cs</LastGenOutput>
-    </None>
-    <Content Include="App_Code\Listados_Tit_Uni.xss">
-      <DependentUpon>Listados_Tit_Uni.xsd</DependentUpon>
-    </Content>
-    <Content Include="App_Code\Listado_Tit_Esp.xsc">
-      <DependentUpon>Listado_Tit_Esp.xsd</DependentUpon>
-    </Content>
-    <Content Include="App_Code\Listado_Cuotas_Esp.xsc">
-      <DependentUpon>Listado_Cuotas_Esp.xsd</DependentUpon>
-    </Content>
-    <None Include="App_Code\Listado_Cuotas_Esp.xsd">
-      <SubType>Designer</SubType>
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>Listado_Cuotas_Esp.Designer.cs</LastGenOutput>
-    </None>
-    <Content Include="App_Code\Listado_Cuotas_Esp.xss">
-      <DependentUpon>Listado_Cuotas_Esp.xsd</DependentUpon>
-    </Content>
-    <Content Include="App_Code\Listado_Expte_Esp.xsc">
-      <DependentUpon>Listado_Expte_Esp.xsd</DependentUpon>
-    </Content>
-    <Content Include="App_Code\Listado_Exptes_Monto_Esp.xsc">
-      <DependentUpon>Listado_Exptes_Monto_Esp.xsd</DependentUpon>
-    </Content>
-    <None Include="App_Code\Listado_Exptes_Monto_Esp.xsd">
-      <SubType>Designer</SubType>
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>Listado_Exptes_Monto_Esp.Designer.cs</LastGenOutput>
-    </None>
-    <Content Include="App_Code\Listado_Exptes_Monto_Esp.xss">
-      <DependentUpon>Listado_Exptes_Monto_Esp.xsd</DependentUpon>
-    </Content>
-    <None Include="App_Code\Listado_Expte_Esp.xsd">
-      <SubType>Designer</SubType>
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>Listado_Expte_Esp.Designer.cs</LastGenOutput>
-    </None>
-    <Content Include="App_Code\Listado_Expte_Esp.xss">
-      <DependentUpon>Listado_Expte_Esp.xsd</DependentUpon>
-    </Content>
-    <None Include="App_Code\Listado_Tit_Esp.xsd">
-      <SubType>Designer</SubType>
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>Listado_Tit_Esp.Designer.cs</LastGenOutput>
-    </None>
-    <Content Include="App_Code\Listado_Tit_Esp.xss">
-      <DependentUpon>Listado_Tit_Esp.xsd</DependentUpon>
-    </Content>
-    <None Include="App_Code\Recibos.xsd">
-      <SubType>Designer</SubType>
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>Recibos.Designer.cs</LastGenOutput>
-    </None>
-    <Content Include="App_Code\Recibos.xss">
-      <DependentUpon>Recibos.xsd</DependentUpon>
-    </Content>
-    <None Include="App_Code\Titulos.xsd">
-      <SubType>Designer</SubType>
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>Titulos.Designer.cs</LastGenOutput>
-    </None>
-    <Content Include="App_Code\Titulos.xss">
-      <DependentUpon>Titulos.xsd</DependentUpon>
-    </Content>
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -672,18 +276,10 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
-    <EmbeddedResource Include="Estadísticas\Cuotas_Por_Desc.rdlc" />
-    <EmbeddedResource Include="Estadísticas\Cuotas_Por_Esp.rdlc" />
     <EmbeddedResource Include="Estadísticas\Expedientes_Por_Esp.rdlc" />
     <EmbeddedResource Include="Estadísticas\Expedientes_Por_Monto_Esp.rdlc" />
     <EmbeddedResource Include="Estadísticas\Expedientes_Por_Obra.rdlc" />
     <EmbeddedResource Include="Estadísticas\Profesionales_Por_Estado.rdlc" />
-    <EmbeddedResource Include="Estadísticas\Profesionales_Por_TM.rdlc" />
-    <EmbeddedResource Include="Estadísticas\Titulos_Por_Esp.rdlc" />
-    <EmbeddedResource Include="Estadísticas\Titulos_Por_Uni.rdlc" />
-    <EmbeddedResource Include="Profesional\Certificado_Habilitación.rdlc" />
-    <EmbeddedResource Include="Estadísticas\Matriculas_Por_Esp.rdlc" />
-    <EmbeddedResource Include="Titulos\Titulos.rdlc" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

@@ -14,7 +14,7 @@ namespace Vista_Web
        // Declaro las controladoras a usar
         string profesional;
         string modo;
-        string expediente;
+       
         string tipo;
         
 
@@ -22,13 +22,13 @@ namespace Vista_Web
         List<Modelo_Entidades.Profesional> lProfesionales;
 
         Controladora.cProfesional cProfesional;
-        Controladora.cExpediente cExpediente;
+       
 
         // Constructor
         public SeleccionarProfesional()
         {
             cProfesional = Controladora.cProfesional.ObtenerInstancia();
-            cExpediente = Controladora.cExpediente.ObtenerInstancia();
+         
         }
 
         //evento que se ejecuta antes de llamar al load
@@ -36,9 +36,9 @@ namespace Vista_Web
         {
             profesional = Server.UrlDecode(Request.QueryString["profesional"]);
 
-            expediente = Server.UrlDecode(Request.QueryString["expediente"]);
+          
             modo = Server.UrlDecode(Request.QueryString["modo"]);
-            tipo = Server.UrlDecode(Request.QueryString["tipo_expediente"]);
+           
 
             oUsuario = (Modelo_Entidades.Usuario)HttpContext.Current.Session["sUsuario"];
         }
@@ -63,15 +63,7 @@ namespace Vista_Web
 
         protected void btn_cancelar_Click(object sender, EventArgs e)
         {
-            if (expediente == null)
-            {
-                Response.Redirect(String.Format("~/Contabilidad/Gestion de Recibos.aspx?"));
-            }
 
-            else
-            {
-                Response.Redirect(String.Format("~/Expedientes/Expediente.aspx?expediente={0}&modo={1}&tipo_expediente={2}&profesional={3}", Server.UrlEncode(expediente), Server.UrlEncode(modo), Server.UrlEncode(tipo), Server.UrlEncode(profesional)));
-            }
         }
 
         protected void btn_seleccionar_Click(object sender, EventArgs e)
@@ -82,35 +74,8 @@ namespace Vista_Web
                 lb_error.Text = "Debe seleccionar un profesional";
             }
 
-            else
-            {
-                if (expediente == null)
-                {
-                    profesional = gvProfesionales.SelectedRow.Cells[1].Text;
-
-                    Response.Redirect(String.Format("~/Contabilidad/Gestion de Recibos.aspx?profesional={0}", Server.UrlEncode(profesional)));
-                }
-
-                else
-                {
-                    profesional = gvProfesionales.SelectedRow.Cells[1].Text;
-                    
-                    //switch (tipo)
-                    //{
-                    //    case ("Modelo_Entidades.OI"):
-                    //        tipo = "OI";
-                    //        break;
-                    //    case ("Modelo_Entidades.FE"):
-                    //        tipo = "FE";
-                    //        break;
-                    //    case ("Modelo_Entidades.HM"):
-                    //        tipo = "HM";
-                    //        break;
-                    //}
-
-                    Response.Redirect(String.Format("~/Expedientes/Expediente.aspx?expediente={0}&modo={1}&tipo_expediente={2}&profesional={3}", Server.UrlEncode(expediente), Server.UrlEncode(modo), Server.UrlEncode(tipo), Server.UrlEncode(profesional)));
-                }
-            }
+           
+            
         }
 
         protected void gvProfesionales_RowCreated(object sender, GridViewRowEventArgs e)
