@@ -25,6 +25,7 @@ namespace UnitTestProfesionales
             toProfesional.celular = 1234564;
             toProfesional.dni = 99773311;
             toProfesional.email1 = "emaildeprueba@probando.com";
+            toProfesional.email2 = "email2deprueba2@2probando2.com";
             toProfesional.Estado = cEstado.ObtenerEstadoHabilitado();
             toProfesional.fecha_nacimiento = new DateTime(1979, 07, 09);
             toProfesional.nombre_apellido = "Clay Morrow";
@@ -47,8 +48,11 @@ namespace UnitTestProfesionales
                 //Seteo la localidad
             localidad = cLocalidad.BuscarLocalidadPorDesc("Rosario");
 
+            direccion.Localidad = localidad;
             //Guardo la direccion
            toProfesional.Direcciones.Add(direccion);
+
+
 #endregion
 
     #region Direccion de trabajo
@@ -62,6 +66,8 @@ namespace UnitTestProfesionales
 
                 //Seteo la localidad de trabajo
             localidadE = cLocalidad.BuscarLocalidadPorDesc("Rosario");
+
+            direccionE.Localidad = localidadE;
             
             //Guardo la direccion de trabajo
             toProfesional.Direcciones.Add(direccionE);
@@ -75,9 +81,13 @@ namespace UnitTestProfesionales
 
             //Recupero el profesional insertado y lo comparo con el que recupero de la bd
             Profesional bdprofesional = cProfesional.ObtenerProfesional(toProfesional.dni);
-
-            Assert.AreSame(toProfesional, bdprofesional, "Hubo algun error");
             
+            //Alguno de estos 2            --------> NO PORQUE EL QUE AGREGO ES NULL
+            Assert.AreEqual(toProfesional, bdprofesional, "hubo error");
+            Assert.AreSame(toProfesional, bdprofesional, "Hubo algun error");
+
+
+           
                         
 
             
