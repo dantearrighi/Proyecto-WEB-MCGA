@@ -87,7 +87,7 @@ namespace Vista_Web.Botoneras
                                 break;
 
                             case "Baja":
-                                if (form == "FrmProfesionales" || form == "FrmExpedientes" || form == "FrmAuditorias")
+                                if (form == "FrmAuditorias")
                                 {
                                     btn_eliminar.Visible = false;
                                 }
