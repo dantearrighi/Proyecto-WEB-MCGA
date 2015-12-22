@@ -237,62 +237,12 @@ namespace Vista_Web
                 oProfesional.email2 = txt_emailalternativo.Text;
                 #endregion
 
-                #region Matrícula del profesional
-
-                /* tipomatricula = cmb_tipomatricula.SelectedValue.ToString();
-                oTipoMatricula = cTipo_Matricula.BuscarTipoMatriculaPorDesc(tipomatricula);
-
-                oProfesional.Tipo_Matricula = oTipoMatricula;
-
-                if (oProfesional.Tipo_Matricula.descripcion == "Relación de Dependencia")
-                {
-                    oProfesional.lugar_trabajo = txt_lugartrabajo.Text;
-                }
-
-                if (oProfesional.Tipo_Matricula.descripcion == "Reciprocidad de Matrícula")
-                {
-                    colegio = cmb_colegios.SelectedValue.ToString();
-                    oColegio = cColegio.BuscarColegioPorDesc(colegio);
-                    oProfesional.Colegio = oColegio;
-                    oProfesional.convenio_año = Convert.ToInt32(txt_año.Text);
-                }
-
-                if (modo == "Alta")
-                {
-                    // Cuando se matricula, le pongo el estado no habilitado. Se va a habilitar cuando pague.
-                    oProfesional.Estado = cEstado.ObtenerEstadoNoHabilitado();
-                    // Doy de alta el 1º historial
-                    Modelo_Entidades.Historial oHistorial = new Modelo_Entidades.Historial();
-                    oHistorial.estado = (cEstado.ObtenerEstadoHabilitado()).descripcion;
-                    tipomatricula = cmb_tipomatricula.SelectedValue.ToString();
-                    oTipoMatricula = cTipo_Matricula.BuscarTipoMatriculaPorDesc(tipomatricula);
-                    oHistorial.tipo_matricula = oTipoMatricula.descripcion;
-                    oHistorial.fecha = DateTime.Now;
-                    oHistorial.observaciones = "Alta en el CIE del profesional";
-                    oProfesional.Historiales.Add(oHistorial);
-                }
-                * 
-                * */
-                #endregion
-
-                #region Contabilidad del profesional
-
-                /* if (modo == "Alta")
-                {
-                    // Doy de alta a la cta cte
-                    Modelo_Entidades.CtaCte oCtaCte = new Modelo_Entidades.CtaCte();
-                    oCtaCte.saldo = 0;
-                    oCtaCte.Profesional = oProfesional;
-                    oProfesional.CtaCte = oCtaCte;
-                }*/
-
-                #endregion
+               
+               
 
                
 
-                #region Títulos del profesional
-
-                #endregion
+              
 
                   if (modo == "Alta")
                     {
