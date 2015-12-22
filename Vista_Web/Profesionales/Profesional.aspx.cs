@@ -423,16 +423,7 @@ namespace Vista_Web
             #endregion
 
 
-            #region datos del título
-
-            //if (oProfesional.Matriculas.Count == 0)
-            //{
-            //    message.Visible = true;
-            //    lb_error.Text = "Debe agregar al menos un título Profesional";
-            //    return false;
-            //}
-            #endregion
-
+            
 
 
 
